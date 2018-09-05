@@ -12,8 +12,11 @@
 }
 
 .feature-item-picture {
-
+height: 100px;
+text-align: center;
 }
 .feature-item-text {
-    
+height: 100px;
+text-align: center;
+
 }
