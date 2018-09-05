@@ -1,0 +1,10 @@
+.hero {
+    background: #009933;
+}
+
+.product-info {
+    height: 300px;
+    width: 200px;
+    background: #996600;
+    margin-left: 5px;
+}

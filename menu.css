@@ -1,0 +1,25 @@
+.menu{
+    display: flex;
+    justify-content: space-between;
+    background: black;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    background: white;
+    align-self: center;
+    margin-left: 5px;
+}
+
+.navigation {
+    display: flex;
+}
+
+.nav-item {
+    margin: 20px;
+    border: 1px solid white;
+    padding: 2px;
+    border-radius: 7px;
+    color: white;
+}

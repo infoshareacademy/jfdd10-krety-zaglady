@@ -1,0 +1,12 @@
+.feature {
+    display: flex;
+    background: #009933;
+    justify-content: space-between;
+
+}
+.feature-item{
+    height: 300px;
+    width: 30%;
+    background: #996600;
+    margin: 5px;
+}

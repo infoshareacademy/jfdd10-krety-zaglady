@@ -1,0 +1,11 @@
+.team{
+    background: #009933;
+    display: flex;
+    justify-content: space-between;
+}
+.team-member{
+    height: 100px;
+    background: #996600;
+    width: 20%;
+    margin: 5px;
+}
