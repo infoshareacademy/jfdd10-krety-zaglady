@@ -1,10 +1,29 @@
 .hero {
-    background: #009933;
+    /* background: #009933; */
+    background-image: url("hero.jpg");
+    background-repeat: repeat-x;
+    height: 400px;
+    display: flex;
+
+    
 }
 
 .product-info {
+    font-size: 20px;
+    
     height: 300px;
-    width: 200px;
+    width: 500px;
     background: #996600;
-    margin-left: 5px;
+    margin: 3vh 3vmin;
+    /* display: flex; */
+    background: #996600;
+    border: 10px solid green;
+    border-radius: 40px;
+    padding: 1ex;
+
+}
+.hero-title {
+    font-size: 25px;
+    color: aliceblue;
+
 }
