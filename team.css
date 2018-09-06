@@ -47,12 +47,15 @@ a.Monika{
     border-radius: 50px;
     box-shadow: 3px 10px 40px 10px black
 }
-
+a[class^="about"]{
+    background: url(about.png) no-repeat center;
+    background-size: 80%;
+    min-width: 50px;
+}
 a[class^="fb"]{
     background: url(fb.png) no-repeat center;
     background-size: 80%;
-    min-width: 50px;
-  
+    min-width: 50px; 
 }
 a[class^="lin"]{
     background: url(lin.png) no-repeat center;
