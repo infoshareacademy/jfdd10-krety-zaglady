@@ -1,7 +1,10 @@
 .menu{
     display: flex;
     justify-content: space-between;
-    background: black;
+    background-color: black;
+    /* opacity: 0.5; */
+    background: rgba(0,0,0,0.5);
+    position: fixed;
 }
 
 .logo {
@@ -13,7 +16,7 @@
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
     border-radius: 50px;
-    }
+}
  
 .logo img {
     margin-left: auto;
@@ -26,11 +29,14 @@
 }
 
 .nav-item {
-    margin: 10px;
-    border: 3px solid white;
-    padding: 9px;
-    border-radius: 30px;
+    margin: 0px;
+    padding: 15px;
     color: white;
-    font-weight: bold;
-    text-transform: uppercase;
+    /* font-weight: bold; */
+    font-size: 25px;
+}
+
+.nav-item:hover {
+    background-color: green;
+    opacity: 0.5;
 }
