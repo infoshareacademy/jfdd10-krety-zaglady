@@ -1,3 +1,7 @@
+body {
+    margin: 0px;
+}
+
 .menu{
     display: flex;
     justify-content: space-between;
@@ -5,6 +9,7 @@
     /* opacity: 0.5; */
     background: rgba(0,0,0,0.5);
     position: fixed;
+    width: 100%;
 }
 
 .logo {
