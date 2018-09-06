@@ -27,27 +27,32 @@ a.Ola{
     background: url(kret-Ola.jpg) no-repeat center;
     background-size: 100%;
     border-radius: 50px;
+    box-shadow: 3px 10px 40px 10px black
 }
 a.Balbina{
     background: url(kret-Balbina.jpg) no-repeat center;
     background-size: 100%;
     border-radius: 50px;
+    box-shadow: 3px 10px 40px 10px black
 }
 a.Lukasz{
     background: url(kret-Lukasz.jpg) no-repeat center;
     background-size: 100%;
     border-radius: 50px;
+    box-shadow: 3px 10px 40px 10px black
 }
 a.Monika{
     background: url(kret-Monika.jpg) no-repeat center;
     background-size: 100%;
     border-radius: 50px;
+    box-shadow: 3px 10px 40px 10px black
 }
 
 a[class^="fb"]{
     background: url(fb.png) no-repeat center;
     background-size: 80%;
     min-width: 50px;
+  
 }
 a[class^="lin"]{
     background: url(lin.png) no-repeat center;
@@ -71,4 +76,7 @@ a[class^="lin"]{
     max-width: 30px;
     padding: 3px;
     margin: 0 auto;
+}
+.team-member span ~ a:hover{
+    background-size: 75%;
 }
