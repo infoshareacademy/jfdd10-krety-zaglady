@@ -14,13 +14,8 @@
     font-size: 20px;
 
     box-shadow: 3px 15px 40px 10px black;
-    
-    /* height: 300px; */
-    /* width: 500px; */
-    /* background: #996600; */
     margin: 3vh 3vmin;
-    /* display: flex; */
-    background: #996600;
+    background: white;
     border: 5px solid white;
     border-radius: 40px;
     padding: 3ex;
@@ -32,7 +27,7 @@ li {
 
 .hero-title {
     font-size: 25px;
-    color: aliceblue;
+    /* color: aliceblue; */
 
 }
 
