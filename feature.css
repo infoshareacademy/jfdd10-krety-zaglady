@@ -1,13 +1,13 @@
 .feature {
     display: flex;
-    background: #009933;
+    background: transparent;
     justify-content: space-between;
 
 }
 .feature-item{
     height: 300px;
     width: 30%;
-    background: #996600;
+    background: transparent;
     margin: 5px;
 }
 
