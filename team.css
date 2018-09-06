@@ -10,11 +10,15 @@
     margin: 5px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+
 }
 
 .team-member a{
     text-decoration: none;
+    text-indent: -10000px;
     color: white;
+    width: 50px;
 }
 
 a.Ola{
@@ -43,16 +47,12 @@ a[class^="lin"]{
     background-size: 80%;
 }
 
-.team-member a{
-text-indent: -10000px;
-}
-
 .team-member span{
     font-weight: bold;
     display: block;
-    width: 80%;
-    margin: 0 auto;
-    padding: 3px;
+    width: 100%;
+    margin: 10px auto 0;
+
 }
 .team-member span ~ a{
     width: 40%;
