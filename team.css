@@ -8,4 +8,54 @@
     background: #996600;
     width: 20%;
     margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team-member a{
+    text-decoration: none;
+    color: white;
+}
+
+a.Ola{
+    background: url(kret-Ola.jpg) no-repeat center;
+    background-size: 80%;
+}
+a.Balbina{
+    background: url(kret-Balbina.jpg) no-repeat center;
+    background-size: 80%;
+}
+a.Lukasz{
+    background: url(kret-Lukasz.jpg) no-repeat center;
+    background-size: 80%;
+}
+a.Monika{
+    background: url(kret-Monika.jpg) no-repeat center;
+    background-size: 80%;
+}
+
+a[class^="fb"]{
+    background: url(fb.png) no-repeat center;
+    background-size: 80%;
+}
+a[class^="lin"]{
+    background: url(lin.png) no-repeat center;
+    background-size: 80%;
+}
+
+.team-member a{
+text-indent: -10000px;
+}
+
+.team-member span{
+    font-weight: bold;
+    display: block;
+    width: 80%
+    margin: 0 auto;
+    padding: 3px;
+}
+.team-member span + a{
+    width: 40%;
+    max-width: 30px;
+    padding: 3px;
 }
