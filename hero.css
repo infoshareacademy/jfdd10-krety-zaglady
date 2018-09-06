@@ -10,19 +10,26 @@
 }
 
 .product-info {
-    box-shadow: 3px 15px 40px 10px black;
+    font-family: 'Anton', sans-serif;
     font-size: 20px;
-    height: 300px;
-    width: 500px;
-    background: #996600;
+
+    box-shadow: 3px 15px 40px 10px black;
+    
+    /* height: 300px; */
+    /* width: 500px; */
+    /* background: #996600; */
     margin: 3vh 3vmin;
     /* display: flex; */
     background: #996600;
     border: 5px solid white;
     border-radius: 40px;
-    padding: 1ex;
+    padding: 3ex;
+}
+li {
+    font-size: 30px;
 
 }
+
 .hero-title {
     font-size: 25px;
     color: aliceblue;
