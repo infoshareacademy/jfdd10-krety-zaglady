@@ -50,12 +50,13 @@ text-indent: -10000px;
 .team-member span{
     font-weight: bold;
     display: block;
-    width: 80%
+    width: 80%;
     margin: 0 auto;
     padding: 3px;
 }
-.team-member span + a{
+.team-member span ~ a{
     width: 40%;
     max-width: 30px;
     padding: 3px;
+    margin: 0 auto;
 }
