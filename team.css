@@ -5,9 +5,10 @@
 }
 .team-member{
     height: 300px;
-    background: #996600;
+    background: transparent;
     width: 20%;
     margin: 5px;
+    padding: 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -19,6 +20,7 @@
     text-indent: -10000px;
     color: white;
     width: 100px;
+    height: 100px;
 }
 
 a.Ola{
@@ -49,7 +51,10 @@ a[class^="lin"]{
 
 .team-member span{
     font-weight: bold;
-    display: block;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     width: 100%;
     margin: 10px auto 0;
     text-align: center;
