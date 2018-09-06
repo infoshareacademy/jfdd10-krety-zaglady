@@ -12,18 +12,34 @@
 }
 
 .icon {
-    width: 50px;
+    width: 70px;
     /* display: flex; */
-    height: 50px;
-
+    height: 70px;
+    background-color: white;
+    text-align: center;
+   
+    
 }
+
+
 .feature-item-picture {
-height: 100px;
-text-align: center;
-
+    padding: 35px;
+    background: white;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: 3px 10px 40px 10px black
 }
+
+.center {
+    text-align: center;
+}
+
+
 .feature-item-text {
-height: 100px;
-text-align: center;
+    padding-top: 50px;
+    height: 100px;
+    text-align: center;
+    font-weight: bold;
 
 }
