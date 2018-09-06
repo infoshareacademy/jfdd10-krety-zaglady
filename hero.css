@@ -1,7 +1,8 @@
 .hero {
-    /* background: #009933; */
-    background-image: url("hero.jpg");
-    background-repeat: repeat-x;
+
+    background-image: url("garden.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 400px;
     display: flex;
 
@@ -9,15 +10,15 @@
 }
 
 .product-info {
+    box-shadow: 3px 15px 40px 10px black;
     font-size: 20px;
-    
     height: 300px;
     width: 500px;
     background: #996600;
     margin: 3vh 3vmin;
     /* display: flex; */
     background: #996600;
-    border: 10px solid green;
+    border: 5px solid white;
     border-radius: 40px;
     padding: 1ex;
 
@@ -25,5 +26,10 @@
 .hero-title {
     font-size: 25px;
     color: aliceblue;
+
+}
+
+.button-f {
+    
 
 }
