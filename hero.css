@@ -2,11 +2,12 @@
     background-image: url("garden.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 500px;
-    display: flex;
+    height: 530px;
+    /* display: flex; */
 }
 
 .product-info {
+    min-width: 330px ;
     font-size: 20px;
     box-shadow: 3px 15px 40px 10px black;
     margin: 3vh 3vmin;
@@ -64,12 +65,11 @@ li {
     color: white;
     font-size: 60px;
     letter-spacing: 30px;
-    font-family: 'Anton', sans-serif;
     text-shadow: 1px 1px 2px red, 0 0 1em green, 0 0 0.2em green;
-    /* text-align: center; */
+    text-align: left;
+    margin-left: 10vh;
+    margin-top: 10vh;
     /* position: absolute; */
-    left: 60vh;
-    top: 20vh;
 }
 .box-product {
     display: flex;
