@@ -15,12 +15,17 @@
 
 }
 
-.team-member a{
+.team-member a {
     text-decoration: none;
     text-indent: -10000px;
     color: white;
     width: 100px;
     height: 100px;
+}
+
+.social a {
+    display: inline-block;
+    width: 30px;
 }
 
 a.Ola{
