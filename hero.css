@@ -60,7 +60,6 @@ li {
 }
 .link-form:hover {
     background-color: green;
-
     color: white;
 }
 .title {
@@ -70,7 +69,11 @@ li {
     font-family: 'Anton', sans-serif;
     text-shadow: 1px 1px 2px red, 0 0 1em green, 0 0 0.2em green;
     /* text-align: center; */
-    position: absolute;
+    /* position: absolute; */
     left: 60vh;
     top: 20vh;
+}
+.box-product {
+    display: flex;
+    
 }
