@@ -1,7 +1,15 @@
+body {
+    margin: 0px;
+}
+
 .menu{
     display: flex;
     justify-content: space-between;
-    background: black;
+    background-color: black;
+    /* opacity: 0.5; */
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    width: 100%;
 }
 
 .logo {
@@ -9,17 +17,31 @@
     width: 50px;
     background: white;
     align-self: center;
-    margin-left: 5px;
+    margin-left: 10px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
 }
+ 
+.logo img {
+    margin-left: auto;
+	margin-right: auto;
+	display: block;
+}    
 
 .navigation {
     display: flex;
 }
 
 .nav-item {
-    margin: 20px;
-    border: 1px solid white;
-    padding: 2px;
-    border-radius: 7px;
+    margin: 0px;
+    padding: 15px;
     color: white;
+    /* font-weight: bold; */
+    font-size: 25px;
+}
+
+.nav-item:hover {
+    background-color: green;
+    opacity: 0.5;
 }

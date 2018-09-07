@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,15 +17,16 @@
 </head>
 
 <body>
-    <div class="menu"> 
-        <div class="logo"></div>
+    <div class="menu">
+        <div class="logo"><img src="molelogo.png" height="47" width="47"></div>
         <div class="navigation">
-            <div class="nav-item"><p>Funkcje produktu</p></div>
-            <div class="nav-item">Subskrypcja</div>
-            <div class="nav-item">O nas</div>
+            <a style="text-decoration: none;" href="#hero"><div class="nav-item">Strona główna</div></a>
+            <a style="text-decoration: none;" href="#feature"><div class="nav-item">Funkcje produktu</div></a>
+            <a style="text-decoration: none;" href="#form"><div class="nav-item">Subskrypcja</div></a>
+            <a style="text-decoration: none;" href="#team"><div class="nav-item">O nas</div></a>
         </div>
     </div>
-    <div class="hero">
+    <div class="hero" id="hero">
         
         <div class="box-product">
                 <div class="title"><h1>Krety zagłady</h1></div>
@@ -40,11 +42,11 @@
                 </ul>
             </div>
                 <div class="link-form">
-                        <a class="button-f" href="#etykieta-form">Zapisz się na premiere</a>
+                        <a class="button-f" href="#etykieta-form">Zapisz się na premierę</a>
                 </div>
         </div>
     </div>
-    <div class="feature">
+    <div class="feature" id="feature">
         <div class="feature-item">
             <div class="center">
                     <div class="feature-item-picture">
@@ -80,11 +82,11 @@
             <div class="feature-item-text">PIELĘGNACJA</div>
         </div>
     </div>
-    <div class="form">
+    <div class="form" id="form">
         <a name="etykieta-form"></a>
         <div class="email"></div>
     </div>
-    <div class="team">
+    <div class="team" id="team">
         <div class="team-member">
             <a href="" class="Ola">kret</a>
             <span>Aleksandra Nowicka</span>
@@ -116,5 +118,4 @@
     </div>
     <div class="footer"></div>
 </body>
-
 </html>
