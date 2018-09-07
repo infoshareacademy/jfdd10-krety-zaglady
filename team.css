@@ -14,7 +14,9 @@
     justify-content: center;
 
 }
-
+.social{
+    min-width: 160px;
+}
 .team-member a {
     text-decoration: none;
     text-indent: -10000px;
