@@ -1,12 +1,9 @@
 .hero {
-
     background-image: url("garden.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 500px;
+    height: 600px;
     display: flex;
-
-    
 }
 
 .product-info {
@@ -15,11 +12,13 @@
 
     box-shadow: 3px 15px 40px 10px black;
     margin: 3vh 3vmin;
+    margin-top: 8vh;
     background: white;
     border: 5px solid white;
     border-radius: 40px;
     padding: 3ex;
 }
+
 li {
     font-size: 30px;
 
