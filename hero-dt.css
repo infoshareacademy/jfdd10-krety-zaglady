@@ -1,0 +1,99 @@
+/* .title {
+    color: white;
+    font-size: 30px;
+    margin-left: 2vh;
+
+}
+.box-product{
+    display: flex;
+    flex-direction: column;
+}
+.hero {
+    height: 900px;
+    background-position: center;
+} */
+
+.hero {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    background-image: url("gfx/garden2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: bottom;
+    background-size: cover;
+    height: 700px;
+    /* display: flex; */
+}
+
+.product-info {
+    min-width: 330px ;
+    font-size: 20px;
+    box-shadow: 3px 15px 40px 10px black;
+    /* margin: 3vh 3vmin; */
+    margin: 0 3vh;
+    /* margin-top: 8vh; */
+    background: white;
+    border: 5px solid white;
+    border-radius: 40px;
+    padding: 3ex;
+}
+
+li {
+    font-size: 30px;
+
+}
+
+.hero-title {
+    font-size: 25px;
+    /* color: aliceblue; */
+
+}
+
+.button-f {
+    text-decoration: none;
+    color: black;
+    color: inherit;
+    transition: color 0.5s;
+}
+.button-f:hover {
+    /* color: black; */
+    text-decoration: none;
+    /* background: red; */
+    color: inherit;
+   
+}
+.link-form{
+    
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    /* height: 1vh; */
+    background-color: white;
+    border: 5px solid white;
+    border-radius: 40px;
+    /* padding: 1ex; */
+    margin: 3vh 3vmin;
+    box-shadow: 3px 15px 40px 10px black;    
+    transition: background-color 0.5s;
+
+}
+.link-form:hover {
+    background-color: #217226;
+    color: white;
+}
+.title {
+    order: -1;
+    color: white;
+    font-size: 30px;
+    letter-spacing: 10px;
+    text-shadow: 1px 1px 2px red, 0 0 1em #217226, 0 0 0.2em #217226;
+    text-align: center;
+    margin-top: 70px;
+}
+.box-product {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    
+}
