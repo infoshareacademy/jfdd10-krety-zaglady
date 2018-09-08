@@ -47,8 +47,9 @@
         background-image: url("gfx/jez.png");
     }
     .bottom-ground{
-        height: 20%;
+        height: 40%;
         background-image: url("gfx/BOTTOM-ground.png");
         background-repeat-y: no-repeat;
-        background-size: cover;
+        /* background-repeat-x: no-repeat; */
+        /* background-size: cover; */
     }
