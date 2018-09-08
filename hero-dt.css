@@ -1,3 +1,14 @@
+.hero {
+    height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: bottom;
+    background-size: cover;
+}
+.box-product {
+
+}
 .title {
     color: white;
     font-size: 30px;
@@ -7,8 +18,4 @@
 .box-product{
     display: flex;
     flex-direction: column;
-}
-.hero {
-    height: 500px;
-    background-position: center;
 }
