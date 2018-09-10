@@ -14,8 +14,10 @@
     justify-content: center;
 
 }
-
-.team-member a{
+.social{
+    min-width: 160px;
+}
+.team-member a {
     text-decoration: none;
     text-indent: -10000px;
     color: white;
@@ -23,25 +25,30 @@
     height: 100px;
 }
 
-a.Ola{
+.social a {
+    display: inline-block;
+    width: 30px;
+}
+
+.Ola{
     background: url(kret-Ola.jpg) no-repeat center;
     background-size: 100%;
     border-radius: 50px;
     box-shadow: 3px 10px 40px 10px black
 }
-a.Balbina{
+.Balbina{
     background: url(kret-Balbina.jpg) no-repeat center;
     background-size: 100%;
     border-radius: 50px;
     box-shadow: 3px 10px 40px 10px black
 }
-a.Lukasz{
+.Lukasz{
     background: url(kret-Lukasz.jpg) no-repeat center;
     background-size: 100%;
     border-radius: 50px;
     box-shadow: 3px 10px 40px 10px black
 }
-a.Monika{
+.Monika{
     background: url(kret-Monika.jpg) no-repeat center;
     background-size: 100%;
     border-radius: 50px;
@@ -64,7 +71,6 @@ a[class^="lin"]{
 }
 
 .team-member span{
-    font-weight: bold;
     font-size: 30px;
     display: flex;
     justify-content: center;
