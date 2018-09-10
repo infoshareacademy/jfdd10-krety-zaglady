@@ -1,25 +1,29 @@
 .hero {
-
-    background-image: url("garden.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 500px;
     display: flex;
-
-    
+    justify-content: center;
+    /* align-items: center; */
+    background-image: url("gfx/garden2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: bottom;
+    background-size: cover;
+    height: 700px;
+    /* display: flex; */
 }
 
 .product-info {
-    font-family: 'Anton', sans-serif;
+    min-width: 330px ;
     font-size: 20px;
-
     box-shadow: 3px 15px 40px 10px black;
-    margin: 3vh 3vmin;
+    /* margin: 3vh 3vmin; */
+    margin: 0 3vh;
+    /* margin-top: 8vh; */
     background: white;
     border: 5px solid white;
     border-radius: 40px;
     padding: 3ex;
 }
+
 li {
     font-size: 30px;
 
@@ -60,18 +64,21 @@ li {
 
 }
 .link-form:hover {
-    background-color: green;
-
+    background-color: #217226;
     color: white;
 }
 .title {
+    order: -1;
     color: white;
-    font-size: 60px;
-    letter-spacing: 30px;
-    font-family: 'Anton', sans-serif;
-    text-shadow: 1px 1px 2px red, 0 0 1em green, 0 0 0.2em green;
-    /* text-align: center; */
-    position: absolute;
-    left: 60vh;
-    top: 20vh;
+    font-size: 30px;
+    letter-spacing: 10px;
+    text-shadow: 1px 1px 2px red, 0 0 1em #217226, 0 0 0.2em #217226;
+    text-align: center;
+    margin-top: 70px;
+}
+.box-product {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    
 }

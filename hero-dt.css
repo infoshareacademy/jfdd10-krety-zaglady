@@ -1,0 +1,21 @@
+.hero {
+    height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: bottom;
+    background-size: cover;
+}
+.box-product {
+
+}
+.title {
+    color: white;
+    font-size: 30px;
+    margin-left: 2vh;
+
+}
+.box-product{
+    display: flex;
+    flex-direction: column;
+}
