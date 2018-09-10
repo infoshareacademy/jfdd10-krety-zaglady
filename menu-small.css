@@ -1,0 +1,145 @@
+@media only screen and (max-width: 600px) {
+    body
+{
+  margin: 0;
+  padding: 0;
+  
+  background: #232323;
+  color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+a:hover
+{
+  color: tomato;
+}
+
+#menu
+{
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  float: right;
+  text-align: right;
+  width: auto;
+  top: 20px;
+  right: 20px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menu input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  right: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; 
+  z-index: 2; 
+  
+  -webkit-touch-callout: none;
+}
+
+#menu div {
+  position: relative;
+}
+
+#menu span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menu div span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menu div span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+
+#menu input:checked ~ div span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-21px, -19px);
+  background: #232323;
+}
+
+
+#menu input:checked ~ div span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+
+#menu input:checked ~ div span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+
+#menunav
+{
+  position: absolute;
+  width: 200px;
+  margin: -100px 0 0 50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  
+  transform-origin: 0% 0%;
+  transform: translate(0, -100%);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menunav li
+{
+  text-align: left;
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menu input:checked ~ ul
+{
+  transform: none;
+}
+}
