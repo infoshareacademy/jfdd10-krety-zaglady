@@ -1,0 +1,49 @@
+@media only screen and (max-width: 600px){
+
+
+
+
+.feature {
+    background: transparent;
+    justify-content: space-between;
+    display: initial;
+}
+.feature-item{
+    height: 300px;
+    width: 30%;
+    background: transparent;
+    margin: 18px auto;
+}
+
+.icon {
+    width: 70px;
+    /* display: flex; */
+    height: 70px;
+    background-color: white;
+    text-align: center;
+   
+    
+}
+
+
+.feature-item-picture {
+    padding: 35px;
+    background: white;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: 3px 10px 40px 10px black
+}
+
+.center {
+    text-align: center;
+}
+
+
+.feature-item-text {
+    padding-top: 50px;
+    height: 100px;
+    text-align: center;
+    font-weight: bold;
+
+}
