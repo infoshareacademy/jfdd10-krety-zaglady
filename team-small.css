@@ -14,17 +14,17 @@
         width: 100%;
     }
     a[class^="about"]{
-        background: url(about.png) no-repeat center;
+        background: url(gfx/about.png) no-repeat center;
         background-size: 80%;
         max-width: 50px;
     }
     a[class^="fb"]{
-        background: url(fb.png) no-repeat center;
+        background: url(gfx/fb.png) no-repeat center;
         background-size: 80%;
         max-width: 50px; 
     }
     a[class^="lin"]{
-        background: url(lin.png) no-repeat center;
+        background: url(gfx/lin.png) no-repeat center;
         background-size: 80%;
         max-width: 50px;
     }
