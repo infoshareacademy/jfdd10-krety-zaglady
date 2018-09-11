@@ -1,4 +1,5 @@
 .hero {
+    /* justify-content: flex-start; */
     height: 700px;
     background-position: center;
     background-repeat: no-repeat;
@@ -10,6 +11,7 @@
 
 }
 .title {
+    
     color: white;
     font-size: 30px;
     margin-left: 2vh;
@@ -17,5 +19,5 @@
 }
 .box-product{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: row-reverse; */
 }
