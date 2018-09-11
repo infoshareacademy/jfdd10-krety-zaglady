@@ -39,6 +39,7 @@ body {
     color: white;
     /* font-weight: bold; */
     font-size: 25px;
+    min-width: 120px;
 }
 
 .nav-item:hover {
