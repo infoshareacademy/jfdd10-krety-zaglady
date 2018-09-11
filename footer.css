@@ -3,7 +3,7 @@
     height: 50px;
     background-color: black;
     background-image: url("gfx/UP-groud.png");
-    background-repeat: no-repeat;
+    background-repeat-y: no-repeat;
     display: flex;
     justify-content: flex-start;
     padding-top: 150px;
