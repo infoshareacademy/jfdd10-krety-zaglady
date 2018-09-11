@@ -64,7 +64,6 @@ nav[role="navigation"]{
   width: 33px;
   height: 4px;
   margin-bottom: 5px;
-  margin-right: 5px;
   position: relative;
   
   background: #cdcdcd;
@@ -110,8 +109,8 @@ nav[role="navigation"]{
   position: absolute;
   width: 200px;
   margin: -100px 0 0 50px;
-  padding: 50px;
-  padding-top: 125px;
+  padding: 125px 20px 20px 20px;
+ 
   
   background: #ededed;
   list-style-type: none;
