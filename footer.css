@@ -1,7 +1,11 @@
 .footer {
     color: white;
-    height: 200px;
+    height: 50px;
     background-color: black;
     background-image: url("gfx/UP-groud.png");
-    background-repeat-y: no-repeat;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 150px;
+    padding-left: 20px;
 }
