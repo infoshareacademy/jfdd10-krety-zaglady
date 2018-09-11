@@ -11,9 +11,11 @@
         justify-content: center;
     }
     .team-member {
+        height: 250px;
         background: transparent;
         width: 20%;
         margin: 0px;
+        margin-top: 20px;
         padding: 0px;
         display: flex;
         flex-wrap: wrap;
