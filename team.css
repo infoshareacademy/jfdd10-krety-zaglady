@@ -1,7 +1,7 @@
 .team{
     background:  #c57d31;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 .team-member{
     height: 300px;
@@ -13,6 +13,7 @@
     flex-wrap: wrap;
     justify-content: center;
     min-width: 120px;
+    max-width: 300px;
 
 }
 .social{
