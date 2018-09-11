@@ -1,0 +1,22 @@
+.form {
+    height: 500px;
+}
+.animals {
+    padding: 10px;
+    height: 60%;
+    display: flex;
+}
+.kret{
+    height: 100%;
+    width: 30%;
+    background: no-repeat;
+    background-position: center;
+    background-image: url("gfx/kret.png");
+}
+.jez{
+    height: 100%;
+    width: 30%;
+    background: no-repeat;
+    background-position: center;
+    background-image: url("gfx/jez.png");
+}
