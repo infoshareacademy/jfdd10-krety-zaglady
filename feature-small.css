@@ -8,6 +8,10 @@
     justify-content: space-between;
     display: initial;
 }
+.feature-background {
+    background: #c57d31;
+    padding: 20px;
+}
 .feature-item{
     height: 300px;
     width: 30%;
