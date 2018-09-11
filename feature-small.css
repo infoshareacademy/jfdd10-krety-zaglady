@@ -1,6 +1,9 @@
 @media only screen and (max-width: 600px){
 
-
+.feature-background {
+    display: flex;
+    flex-direction: column;
+}
 
 
 .feature {
@@ -10,7 +13,6 @@
 }
 .feature-background {
     background: #c57d31;
-    padding: 20px;
 }
 .feature-item{
     height: 300px;
