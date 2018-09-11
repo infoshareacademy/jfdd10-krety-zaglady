@@ -1,14 +1,3 @@
-    /* margin-bottom: 10px; */
-    /* height: 300px;
-    background: #c57d31;
-    background-image: url("gfx/garden2.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position-y: bottom url(";
-    background-size: cover;
-    height: 700px;
-    border: 1px solid black; */
-
     .form {
         height: 700px;
     }
@@ -26,25 +15,11 @@
         height: 60%;
         display: flex;
     }
-    .kret{
-        height: 100%;
-        width: 30%;
-        background: no-repeat;
-        background-position: center;
-        background-image: url("gfx/kret.png");
-    }
     .form-window{
         height: 100%;
         width: 40%;
         min-width: 400px;
         background: transparent;
-    }
-    .jez{
-        height: 100%;
-        width: 30%;
-        background: no-repeat;
-        background-position: center;
-        background-image: url("gfx/jez.png");
     }
     .bottom-ground{
         height: 40%;
