@@ -1,3 +1,8 @@
+nav[role="navigation"]{
+  display: none;
+}
+
+
 @media only screen and (max-width: 600px) {
     body
 {
@@ -20,6 +25,10 @@ a
 a:hover
 {
   color: tomato;
+}
+
+nav[role="navigation"]{
+  display: block
 }
 
 #menu
