@@ -1,0 +1,7 @@
+.footer {
+    color: white;
+    height: 200px;
+    background-color: black;
+    background-image: url("gfx/UP-groud.png");
+    background-repeat-y: no-repeat;
+}

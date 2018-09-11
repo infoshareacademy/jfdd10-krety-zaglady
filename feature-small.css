@@ -1,14 +1,18 @@
-.feature {
-    display: flex;
-    background: #c57d31;
-    justify-content: space-between;
+@media only screen and (max-width: 600px){
 
+
+
+
+.feature {
+    background: transparent;
+    justify-content: space-between;
+    display: initial;
 }
 .feature-item{
     height: 300px;
     width: 30%;
     background: transparent;
-    margin: 5px;
+    margin: 18px auto;
 }
 
 .icon {
