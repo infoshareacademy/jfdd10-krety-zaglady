@@ -77,7 +77,6 @@ a[class^="lin"]{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 100%;
     margin: 10px auto 0;
     text-align: center;
 
