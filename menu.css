@@ -38,8 +38,7 @@ body {
     padding: 15px;
     color: white;
     /* font-weight: bold; */
-    font-size: 25px;
-    min-width: 120px;
+    font-size: 20px;
 }
 
 .nav-item:hover {
