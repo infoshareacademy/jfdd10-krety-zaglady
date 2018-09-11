@@ -10,9 +10,6 @@
         flex-direction: row;
         justify-content: center;
     }
-    .team-member{
-        width: 100%;
-    }
     .team-member {
         background: transparent;
         width: 20%;
@@ -21,6 +18,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: flex-start;
         min-width: 120px;
         max-width: 300px;
     }
