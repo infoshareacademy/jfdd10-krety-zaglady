@@ -1,19 +1,20 @@
-.hero {
+  .hero {
     display: flex;
     justify-content: center;
+    padding: 20px;
     /* align-items: center; */
     background-image: url("gfx/garden2.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-position-y: bottom;
     background-size: cover;
-    height: 700px;
+    /* height: 700px; */
     /* display: flex; */
 }
 
 .product-info {
     min-width: 240px ;
-    /* font-size: 10px; */
+    font-size: 20px;
     text-align: center;
     box-shadow: 3px 15px 40px 10px black;
     /* margin: 3vh 3vmin; */
@@ -25,7 +26,7 @@
 }
 
 .hero-title {
-    font-size: 20px;
+    font-size: 30px;
 }
 .button-f {
     text-decoration: none;
@@ -61,7 +62,7 @@
 .title {
     order: -1;
     color: white;
-    font-size: 30px;
+    font-size: 20px;
     letter-spacing: 10px;
     text-shadow: 1px 1px 2px red, 0 0 1em #217226, 0 0 0.2em #217226;
     text-align: center;

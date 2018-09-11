@@ -4,26 +4,18 @@ nav[role="navigation"]{
 
 
 @media only screen and (max-width: 600px) {
-    body
-{
-  margin: 0;
-  padding: 0;
-  
-  background: #232323;
-  color: #cdcdcd;
-  font-family: "Avenir Next", "Avenir", sans-serif;
-}
 
-a
-{
+  .navigation a, #menunav a {
   text-decoration: none;
   color: #232323;
   
   transition: color 0.3s ease;
 }
 
-a:hover
-{
+.navigation a:hover {
+  color: tomato;
+}
+#menunav a:hover {
   color: tomato;
 }
 
@@ -31,8 +23,7 @@ nav[role="navigation"]{
   display: block
 }
 
-#menu
-{
+#menu {
   display: flex;
   flex-direction: row-reverse;
   position: relative;
@@ -48,8 +39,7 @@ nav[role="navigation"]{
   user-select: none;
 }
 
-#menu input
-{
+#menu input {
   display: block;
   width: 40px;
   height: 32px;
@@ -69,8 +59,7 @@ nav[role="navigation"]{
   position: relative;
 }
 
-#menu span
-{
+#menu span {
   display: block;
   width: 33px;
   height: 4px;
@@ -90,40 +79,34 @@ nav[role="navigation"]{
               opacity 0.55s ease;
 }
 
-#menu div span:first-child
-{
+#menu div span:first-child {
   transform-origin: 0% 0%;
 }
 
-#menu div span:nth-last-child(2)
-{
+#menu div span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
 
 
-#menu input:checked ~ div span
-{
+#menu input:checked ~ div span {
   opacity: 1;
   transform: rotate(45deg) translate(-21px, -19px);
   background: #232323;
 }
 
 
-#menu input:checked ~ div span:nth-last-child(3)
-{
+#menu input:checked ~ div span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
 
-#menu input:checked ~ div span:nth-last-child(2)
-{
+#menu input:checked ~ div span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
 
-#menunav
-{
+#menunav {
   position: absolute;
   width: 200px;
   margin: -100px 0 0 50px;
@@ -140,15 +123,13 @@ nav[role="navigation"]{
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
-#menunav li
-{
+#menunav li {
   text-align: left;
   padding: 10px 0;
   font-size: 22px;
 }
 
-#menu input:checked ~ ul
-{
+#menu input:checked ~ ul {
   transform: none;
 }
 }

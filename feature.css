@@ -4,10 +4,16 @@
     justify-content: space-between;
 
 }
+.feature-background {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
 .feature-item{
     height: 300px;
     width: 30%;
-    background: transparent;
+    /* background: transparent; */
     margin: 5px;
 }
 
