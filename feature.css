@@ -7,7 +7,7 @@
 .feature-item{
     height: 300px;
     width: 30%;
-    background: transparent;
+    /* background: transparent; */
     margin: 5px;
 }
 
