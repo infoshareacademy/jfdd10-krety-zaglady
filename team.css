@@ -59,11 +59,19 @@
     border-radius: 50px;
     box-shadow: 3px 10px 40px 10px black
 }
+.Lukasz-true {
+    background: url(gfx/Lukasz.jpg) no-repeat center;
+    background-size: 100%;
+}
 .Monika{
     background: url(gfx/kret-Monika.jpg) no-repeat center;
     background-size: 100%;
     border-radius: 50px;
     box-shadow: 3px 10px 40px 10px black
+}
+.Monika-true {
+    background: url(gfx/Monika.jpg) no-repeat top;
+    background-size: 100%;
 }
 a[class^="about"]{
     background: url(gfx/about.png) no-repeat center;
