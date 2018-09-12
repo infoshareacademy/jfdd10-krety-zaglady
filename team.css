@@ -13,7 +13,7 @@
     flex-wrap: wrap;
     justify-content: center;
     min-width: 120px;
-    max-width: 300px;
+    max-width: 250px;
 
 }
 .social{
@@ -77,7 +77,6 @@ a[class^="lin"]{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 100%;
     margin: 10px auto 0;
     text-align: center;
 

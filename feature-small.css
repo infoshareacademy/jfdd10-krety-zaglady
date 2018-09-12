@@ -1,6 +1,9 @@
 @media only screen and (max-width: 600px){
 
-
+.feature-background {
+    display: flex;
+    flex-direction: column;
+}
 
 
 .feature {
@@ -10,13 +13,12 @@
 }
 .feature-background {
     background: #c57d31;
-    padding: 20px;
 }
 .feature-item{
-    height: 300px;
+    height: 200px;
     width: 30%;
     background: transparent;
-    margin: 18px auto;
+    margin: 28px auto;
 }
 
 .icon {
@@ -45,8 +47,8 @@
 
 
 .feature-item-text {
-    padding-top: 50px;
-    height: 100px;
+    padding-top: 30px;
+    height: 50px;
     text-align: center;
     font-size: 30px;
 
