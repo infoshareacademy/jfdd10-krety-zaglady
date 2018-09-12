@@ -2,14 +2,12 @@
     display: flex;
     justify-content: center;
     padding: 20px;
-    /* align-items: center; */
     background-image: url("gfx/garden2.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-position-y: bottom;
     background-size: cover;
-    /* height: 700px; */
-    /* display: flex; */
+    height: 590px;
 }
 
 .product-info {
@@ -17,9 +15,7 @@
     font-size: 20px;
     text-align: center;
     box-shadow: 3px 15px 40px 10px black;
-    /* margin: 3vh 3vmin; */
-    margin: 0 3vh;
-    /* margin-top: 8vh; */
+    margin: 0 3vh 40px;
     background: white;
     border: 5px solid white;
     padding: 5px;
@@ -40,20 +36,15 @@
 }
 .link-form{
     align-self: center;
-    /* width: 240px; */
     padding: 5px;
     font-family: 'Anton', sans-serif;
     text-align: center;
-    /* font-size: 30px; */
-    /* height: 1vh; */
     background-color: white;
     border: 5px solid white;
     border-radius: 40px;
-    /* padding: 1ex; */
     margin: 3vh 3vmin;
     box-shadow: 3px 15px 40px 10px black;    
     transition: background-color 0.5s;
-
 }
 .link-form:hover {
     background-color: #217226;
@@ -70,9 +61,7 @@
 }
 .box-product {
     display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    
+    flex-direction: column;  
 }
 .title-class{
     display: flex;

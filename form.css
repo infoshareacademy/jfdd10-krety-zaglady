@@ -19,7 +19,7 @@
     .form-window{
         height: 100%;
         width: 40%;
-        min-width: 400px;
+        min-width: 280px;
         background: transparent;
     }
     .bottom-ground{
@@ -33,8 +33,11 @@
         text-align: center;
     }
     .enter-email {
-        color: white;
         display: flex;
+        flex-wrap: wrap;
+        color: white;
+        min-width: 280px;
+        /* display: flex;    dodać do Desctop */
         flex-grow: 1;
         justify-content: center;
         text-align: center;
@@ -44,7 +47,7 @@
         color: black;
         background-color: white;
         height: 50px;
-        width: 400px;
+        width: 90%;
         border-radius: 30px;
     }
     .button-to-send {
@@ -52,7 +55,7 @@
         color: black;
         background-color: white;
         height: 50px;
-        width: 120px;
+        width: 50%;
         border-radius: 30px;
     }
     

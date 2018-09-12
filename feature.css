@@ -1,5 +1,6 @@
 .feature {
     display: flex;
+    flex-wrap: wrap;
     background: #c57d31;
     justify-content: space-between;
 
