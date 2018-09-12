@@ -49,6 +49,10 @@
     border-radius: 50px;
     box-shadow: 3px 10px 40px 10px black
 }
+.Balbina-true {
+    background: url(gfx/Balbina.jpg) no-repeat center;
+    background-size: 100%;
+}
 .Lukasz{
     background: url(gfx/kret-Lukasz.jpg) no-repeat center;
     background-size: 100%;
