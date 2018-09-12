@@ -81,12 +81,12 @@
     }
   }
   
-  .feature-item {
+  .feature-item-picture {
     animation-duration: 1s;
     animation-fill-mode: both;
   }
 
-  .feature-item:hover {
+  .feature-item-picture:hover {
     backface-visibility: visible;
     animation-name: flip;
   }

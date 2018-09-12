@@ -87,6 +87,6 @@ a[class^="lin"]{
     padding: 3px;
     margin: 0 auto;
 }
-.team-member span ~ a:hover{
+.social a:hover{
     background-size: 75%;
 }
