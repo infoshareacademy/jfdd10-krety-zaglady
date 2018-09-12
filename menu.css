@@ -9,7 +9,7 @@ body {
     /* opacity: 0.5; */
     background: rgba(0,0,0,0.5);
     position: fixed;
-    width: 100%;
+    width: 99%;
 }
 
 .logo {
