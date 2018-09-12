@@ -22,7 +22,9 @@ nav[role="navigation"]{
 nav[role="navigation"]{
   display: block
 }
-
+.nav {
+  margin-right: -30px;
+}
 #menu {
   display: flex;
   flex-direction: row-reverse;
