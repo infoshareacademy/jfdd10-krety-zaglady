@@ -38,6 +38,11 @@
     border-radius: 50px;
     box-shadow: 3px 10px 40px 10px black
 }
+.Ola-true {
+    background: url(gfx/Ola.jpg) no-repeat center;
+    background-size: 90%;
+    background-color: white;
+}
 .Balbina{
     background: url(gfx/kret-Balbina.jpg) no-repeat center;
     background-size: 100%;
