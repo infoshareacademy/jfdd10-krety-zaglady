@@ -1,15 +1,54 @@
   .hero {
+    z-index: 10;
+    position: relative;
     display: flex;
     justify-content: center;
-    padding: 20px;
-    background-image: url("gfx/garden2.jpg");
+    /* padding: 20px; */
+    /* background-image: url("gfx/garden_png.png"); */
     background-repeat: no-repeat;
     background-position: center;
     background-position-y: bottom;
     background-size: cover;
     height: 590px;
 }
-
+.hero-tlo1 {
+    padding-top: 15;
+    z-index: 10;
+    background-image: url("gfx/paralaxa/happy-sun.png");
+    position: absolute;
+    background: cover; 
+    left: -100px;
+    top: -200px;
+    width: 600px;
+    height: 600px;
+    background-repeat: no-repeat;
+}
+.hero-tlo2 {
+    /* padding-top: 15; */
+    z-index: 5;
+    margin-top: -400;
+    background-image: url("gfx/paralaxa/clouds22.jpg");
+    background-size: 100%;
+    position: absolute;
+    /* background: cover;  */
+    /* left: -100px; */
+    /* top: 0px; */
+    width: 100%;
+    height: 700px;
+    background-repeat: repeat-x;
+}
+.hero-tlo3 {
+    z-index: 16;
+    background-image: url("gfx/garden_png.png");
+    position: absolute;
+    background: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: bottom;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
 .product-info {
     min-width: 240px ;
     font-size: 20px;
@@ -60,10 +99,24 @@
     margin-top: 70px;
 }
 .box-product {
+    z-index: 100;
     display: flex;
     flex-direction: column;  
 }
 .title-class{
     display: flex;
     flex-direction: column;
+}
+
+@keyframes sungoin {
+    0% {
+        rotate: 10deg;
+    }
+    50% {
+        rotate: -45deg;
+    }
+    100% {
+        rotate: 10deg;
+    }
+
 }

@@ -18,7 +18,7 @@
     }
     .form-window{
         height: 100%;
-        width: 40%;
+        padding: 10px;
         min-width: 280px;
         background: transparent;
     }
@@ -27,7 +27,12 @@
         background-image: url("gfx/BOTTOM-ground.png");
         background-repeat-y: no-repeat;
     }
+    .h1-form {
+        line-height: 50px;
+
+    }
     .form-info {
+        margin-bottom: 100px;
         color: white;
         letter-spacing: 6px;
         text-align: center;
@@ -44,6 +49,7 @@
     }
     .email-window {
         margin-right: 20px;
+        margin-bottom: 40px;
         color: black;
         background-color: white;
         height: 50px;
