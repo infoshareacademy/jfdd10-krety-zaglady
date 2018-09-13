@@ -20,6 +20,7 @@
         height: 100%;
         padding: 10px;
         min-width: 280px;
+        position: absolute;
         background: transparent;
     }
     .bottom-ground{
