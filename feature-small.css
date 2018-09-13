@@ -1,12 +1,14 @@
 @media only screen and (max-width: 600px){
 
 .feature-background {
+    z-index: 12;
     display: flex;
     flex-direction: column;
 }
 
 
 .feature {
+    z-index: 12;
     background: transparent;
     justify-content: space-between;
     display: initial;
