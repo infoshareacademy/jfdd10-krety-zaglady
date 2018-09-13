@@ -12,6 +12,7 @@
     height: 590px;
 }
 .hero-tlo1 {
+    animation: sungoin 5s ease 1s infinite alternate none;
     padding-top: 15;
     z-index: 10;
     background-image: url("gfx/paralaxa/happy-sun.png");
@@ -21,7 +22,10 @@
     top: -200px;
     width: 600px;
     height: 600px;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;   
+}
+.hero-tlo3:hover {
+    animation-play-state: paused;
 }
 .hero-tlo2 {
     /* padding-top: 15; */
@@ -109,14 +113,9 @@
 }
 
 @keyframes sungoin {
-    0% {
-        rotate: 10deg;
-    }
-    50% {
-        rotate: -45deg;
-    }
-    100% {
-        rotate: 10deg;
-    }
-
+0% { margin-left: 0 }
+25% { margin-left: 5% }
+50% { margin-left: 15% }
+75% { margin-left: 30% }
+100% { margin-left: 60% }
 }
