@@ -4,7 +4,8 @@
 //1. znajdź zdjęcia
 var images = document.querySelectorAll('.team-member .picture');
 
-//2. Gdy jesteśmy na pozycji 
+//2. Gdy jesteśmy na pozycji odpowiadającej sekcji #team, do każdego elementu images dodaj klasę "true", 
+// dzięki czemu zdjęcię zostanie zamienione na profilowe
 window.addEventListener('scroll', function () {
     var screenOffset = window.scrollY;
     var target = document.querySelector('#team')
