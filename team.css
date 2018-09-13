@@ -4,7 +4,7 @@
     justify-content: center;
 }
 .team-member{
-    height: 300px;
+    height: 250px;
     /* background: transparent; */
     width: 20%;
     margin: 5px;
@@ -30,6 +30,7 @@
 .social a {
     display: inline-block;
     width: 30px;
+    height: 40px;
 }
 
 .Ola{
@@ -42,6 +43,8 @@
     background: url(gfx/Ola.jpg) no-repeat center;
     background-size: 90%;
     background-color: white;
+    -webkit-transition: background-image 0.8s ease-in-out;
+    transition: background-image 0.8s ease-in-out;
 }
 .Balbina{
     background: url(gfx/kret-Balbina.jpg) no-repeat center;
@@ -52,6 +55,8 @@
 .Balbina.true {
     background: url(gfx/Balbina.jpg) no-repeat center;
     background-size: 100%;
+    -webkit-transition: background-image 0.8s ease-in-out;
+    transition: background-image 0.8s ease-in-out;
 }
 .Lukasz{
     background: url(gfx/kret-Lukasz.jpg) no-repeat center;
@@ -62,6 +67,8 @@
 .Lukasz.true {
     background: url(gfx/Lukasz.jpg) no-repeat center;
     background-size: 100%;
+    -webkit-transition: background-image 0.8s ease-in-out;
+    transition: background-image 0.8s ease-in-out;
 }
 .Monika{
     background: url(gfx/kret-Monika.jpg) no-repeat center;
@@ -72,6 +79,8 @@
 .Monika.true {
     background: url(gfx/Monika.jpg) no-repeat top;
     background-size: 100%;
+    -webkit-transition: background-image 0.8s ease-in-out;
+    transition: background-image 0.8s ease-in-out;
 }
 a[class^="about"]{
     background: url(gfx/about.png) no-repeat center;
@@ -90,6 +99,8 @@ a[class^="lin"]{
 }
 
 .team-member span{
+    height: 70px;
+    padding-top: 10px;
     font-size: 30px;
     display: flex;
     justify-content: center;
