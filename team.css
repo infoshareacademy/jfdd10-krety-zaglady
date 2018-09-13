@@ -4,7 +4,7 @@
     justify-content: center;
 }
 .team-member{
-    height: 300px;
+    height: 250px;
     /* background: transparent; */
     width: 20%;
     margin: 5px;
@@ -30,6 +30,7 @@
 .social a {
     display: inline-block;
     width: 30px;
+    height: 40px;
 }
 
 .Ola{
@@ -98,7 +99,7 @@ a[class^="lin"]{
 }
 
 .team-member span{
-    height: 50px;
+    height: 70px;
     padding-top: 10px;
     font-size: 30px;
     display: flex;
