@@ -1,15 +1,34 @@
   .hero {
+    z-index: 10;
+    position: relative;
     display: flex;
     justify-content: center;
     padding: 20px;
-    background-image: url("gfx/garden2.jpg");
+    background-image: url("gfx/garden_png.png");
     background-repeat: no-repeat;
     background-position: center;
     background-position-y: bottom;
     background-size: cover;
     height: 590px;
 }
-
+.hero-tlo1 {
+    z-index: 20;
+    background-image: url("gfx/paralaxa/happy-sun.png");
+    position: absolute;
+    background: cover; 
+    left: 100px;
+    width: 600px;
+    height: 600px;
+    background-repeat: no-repeat;
+}
+.hero.tlo2 {
+    z-index: 30;
+    background-image: url("gfx/paralaxa/fance.jpg");
+    background: cover; 
+    width: 600px;
+    height: 600px;
+    background-repeat: no-repeat;
+}
 .product-info {
     min-width: 240px ;
     font-size: 20px;
@@ -60,6 +79,7 @@
     margin-top: 70px;
 }
 .box-product {
+    z-index: 100;
     display: flex;
     flex-direction: column;  
 }
