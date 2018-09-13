@@ -4,12 +4,12 @@
 //1. znajdź zdjęcia
 var images = document.querySelectorAll('.team-member .picture');
 
-//2. Gdy jesteśmy na pozycji
+//2. Gdy jesteśmy na pozycji 
 window.addEventListener('scroll', function () {
     var screenOffset = window.scrollY;
     var target = document.querySelector('#team')
 
-    if (screenOffset > target.offsetTop - window.innerHeight / 1.5) {
+    if (screenOffset > target.offsetTop - window.innerHeight / 2) {
         images.forEach(function (image) {
             image.classList.add('true')
         })
