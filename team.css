@@ -38,7 +38,7 @@
     border-radius: 50px;
     box-shadow: 3px 10px 40px 10px black
 }
-.Ola-true {
+.Ola.true {
     background: url(gfx/Ola.jpg) no-repeat center;
     background-size: 90%;
     background-color: white;
@@ -49,7 +49,7 @@
     border-radius: 50px;
     box-shadow: 3px 10px 40px 10px black
 }
-.Balbina-true {
+.Balbina.true {
     background: url(gfx/Balbina.jpg) no-repeat center;
     background-size: 100%;
 }
@@ -59,7 +59,7 @@
     border-radius: 50px;
     box-shadow: 3px 10px 40px 10px black
 }
-.Lukasz-true {
+.Lukasz.true {
     background: url(gfx/Lukasz.jpg) no-repeat center;
     background-size: 100%;
 }
@@ -69,7 +69,7 @@
     border-radius: 50px;
     box-shadow: 3px 10px 40px 10px black
 }
-.Monika-true {
+.Monika.true {
     background: url(gfx/Monika.jpg) no-repeat top;
     background-size: 100%;
 }
