@@ -5,9 +5,12 @@ nav[role="navigation"]{
 
 @media only screen and (max-width: 600px) {
 
+  .menu {
+  background-color: rgba(0, 0, 0, 0.877);
+}
   .navigation a, #menunav a {
   text-decoration: none;
-  color: #232323;
+  color: #d6d1d1;
   
   transition: color 0.3s ease;
 }
@@ -92,7 +95,7 @@ nav[role="navigation"]{
 #menu input:checked ~ div span {
   opacity: 1;
   transform: rotate(45deg) translate(-21px, -19px);
-  background: #232323;
+  background: #d6d1d1;
 }
 
 
@@ -114,7 +117,7 @@ nav[role="navigation"]{
   padding: 125px 20px 20px 20px;
  
   
-  background: #ededed;
+  background: rgba(0, 0, 0, 0.877);
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   
