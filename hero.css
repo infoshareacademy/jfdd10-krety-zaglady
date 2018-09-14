@@ -9,6 +9,7 @@
     background-size: cover;
     height: 590px;
     background: #9DE1F7;
+    overflow:hidden;
 }
 .hero-tlo1 {
     animation: sungoin 5s ease 1s infinite alternate none;
@@ -16,7 +17,7 @@
     z-index: 10;
     background-image: url("gfx/paralaxa/happy-sun.png");
     position: absolute;
-    background: cover; 
+    /* background: cover;  */
     /* left: 100px; */
     /* top: 30px; */
     width: 600px;
@@ -84,7 +85,7 @@
     background-color: white;
     border: 5px solid white;
     border-radius: 40px;
-    margin: 3vh 3vmin;
+    margin: 1vh 3vmin;
     box-shadow: 3px 15px 40px 10px black;    
     transition: background-color 0.5s;
     width: 70%;
