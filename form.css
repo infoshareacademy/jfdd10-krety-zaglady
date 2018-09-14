@@ -65,5 +65,9 @@
         height: 50px;
         width: 50%;
         border-radius: 30px;
+        border: none;
+        transition: background-color 0.5s;
     }
-    
+    .button-to-send:hover {
+        background-color: gray;
+    }
