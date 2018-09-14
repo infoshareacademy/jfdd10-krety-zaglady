@@ -13,8 +13,9 @@
 }
 .hero-tlo1 {
     animation: sungoin 5s ease 1s infinite alternate none;
-    padding-top: 15;
+    padding-top: 15px;
     z-index: 10;
+    left: 300px;
     background-image: url("gfx/paralaxa/happy-sun.png");
     position: absolute;
     width: 600px;
