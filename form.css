@@ -20,6 +20,7 @@
         height: 100%;
         padding: 10px;
         min-width: 280px;
+        position: absolute;
         background: transparent;
     }
     .bottom-ground{
@@ -48,8 +49,7 @@
         text-align: center;
     }
     .email-window {
-        margin-right: 20px;
-        margin-bottom: 40px;
+        margin-bottom: 10px;
         color: black;
         background-color: white;
         height: 50px;
