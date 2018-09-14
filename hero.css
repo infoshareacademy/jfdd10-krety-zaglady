@@ -3,8 +3,6 @@
     position: relative;
     display: flex;
     justify-content: center;
-    /* padding: 20px; */
-    /* background-image: url("gfx/garden_png.png"); */
     background-repeat: no-repeat;
     background-position: center;
     background-position-y: bottom;
@@ -29,15 +27,11 @@
 }
 .hero-tlo2 {
     animation: cloudson 5s ease 1s infinite alternate none;
-    /* padding-top: 15; */
     z-index: 5;
     margin-top: -400;
     background-image: url("gfx/paralaxa/clouds22.jpg");
     background-size: 100%;
     position: absolute;
-    /* background: cover;  */
-    /* left: -100px; */
-    /* top: 0px; */
     width: 100%;
     height: 700px;
     background-repeat: repeat-x;
@@ -73,6 +67,7 @@
     color: black;
     color: inherit;
     transition: color 0.5s;
+    font-size: 25px;
 }
 .button-f:hover {
     text-decoration: none;
@@ -89,6 +84,8 @@
     margin: 3vh 3vmin;
     box-shadow: 3px 15px 40px 10px black;    
     transition: background-color 0.5s;
+    width: 70%;
+    height: 25px;
 }
 .link-form:hover {
     background-color: #217226;
@@ -107,6 +104,7 @@
     z-index: 100;
     display: flex;
     flex-direction: column;  
+    width: 40%;
 }
 .title-class{
     display: flex;
