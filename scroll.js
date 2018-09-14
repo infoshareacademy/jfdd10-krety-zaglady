@@ -1,5 +1,5 @@
 (function () {
-  var navLinks = document.querySelectorAll('.navigation a');
+  var navLinks = document.querySelectorAll('.menu a');
   var targets = [];
 
   navLinks.forEach(function (navLink) {
@@ -16,7 +16,7 @@
       })
     })
   })
-
+  
   window.addEventListener('scroll', function () {
     var scroll = window.scrollY;
 
