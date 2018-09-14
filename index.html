@@ -51,7 +51,9 @@
           </nav>
     </div>
     <div class="hero" id="hero">
-        <div class="hero-tlo1"></div>
+        <div class="hero-tlo1-size">
+            <div class="hero-tlo1"></div>
+        </div>
         <div class="hero-tlo2"></div>
         <div class="hero-tlo3"></div>
         <div class="box-product">
@@ -120,13 +122,19 @@
                   <div class="form-info">
                     <h1 class="h1-form">Zapisz się na subskrypcję już dziś</h1>
                     <p>będziesz na bieżąco, żaden kret Cię nie zaskoczy!</p>
-                    
+                    <form action="http://www.retrogameparty.pl/OT" method="get">
                     <div class="enter-email">
                         <div class="email-window">
-                            <p>tu podaj e-mail</p>
+                            <!-- <form> -->
+                                <div class="form-group">
+                                  <!-- <label for="exampleFormControlInput1">Email address</label> -->
+                                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="wpisz tu swój email name@example.com">
+                                </div>
+                            <!-- </form> -->
                         </div>
-                        <div class="button-to-send"><p>wyślij</p></div>
+                        <button class="button-to-send" type="submit">wyślij</button>
                     </div>
+                    </form>
                   </div>  
                 </div>
                 <div class="jez"></div>

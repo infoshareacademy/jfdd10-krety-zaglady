@@ -48,12 +48,15 @@
         justify-content: center;
         text-align: center;
     }
-    .email-window {
-        margin-bottom: 10px;
-        color: black;
-        background-color: white;
+    .form-control {
+        display: flex;
+        border: 0;
+        text-align: center;
+        margin-right: 20px;
+        margin-bottom: 40px;
+/*  */
         height: 50px;
-        width: 90%;
+        width: 340px;
         border-radius: 30px;
     }
     .button-to-send {
@@ -63,5 +66,9 @@
         height: 50px;
         width: 50%;
         border-radius: 30px;
+        border: none;
+        transition: background-color 0.5s;
     }
-    
+    .button-to-send:hover {
+        background-color: gray;
+    }
