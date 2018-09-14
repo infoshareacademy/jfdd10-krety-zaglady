@@ -8,6 +8,11 @@
 }
 .box-product {
 }
+.hero-title {
+    font-size: 40px;
+    letter-spacing: 10px;
+    text-shadow: 2px 2px 0px yellow;
+}
 .title {
     
     color: white;
