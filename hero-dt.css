@@ -21,3 +21,7 @@
     display: flex;
     /* flex-direction: row-reverse; */
 }
+.product-info {
+    min-width: 240px ;
+    font-size: 30px;
+}
