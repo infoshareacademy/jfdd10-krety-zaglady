@@ -29,6 +29,15 @@
     
 }
 
+.feature-item-picture.active {
+height: 200px;
+width: 300px;
+background-color: #fff;
+border-radius: 3px;
+}
+.feature-item-picture.active ~ div {
+  display: none;
+}
 
 .feature-item-picture {
     padding: 35px;
