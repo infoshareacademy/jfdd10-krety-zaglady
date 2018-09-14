@@ -24,6 +24,12 @@
         min-width: 120px;
         max-width: 300px;
     }
+
+    .team-member span{
+        font-size: 25px;
+        width: 200px;
+    }
+
     a[class^="about"]{
         background: url(gfx/about.png) no-repeat center;
         background-size: 80%;

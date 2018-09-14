@@ -18,7 +18,7 @@
 }
 .feature-item{
     height: 200px;
-    width: 30%;
+    width: auto;
     background: transparent;
     margin: 28px auto;
 }

@@ -12,6 +12,10 @@ body {
     width: 100%;
 }
 
+.navigation .active {
+    background: grey;
+}
+
 .logo {
     height: 50px;
     width: 50px;
