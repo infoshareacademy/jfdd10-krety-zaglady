@@ -18,8 +18,11 @@
 }
 .feature-item{
     width: auto;
+    max-width: 280px;
     background: transparent;
     margin: 28px auto;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .icon {
@@ -34,7 +37,7 @@
 
 
 .feature-item-picture {
-    padding: 35px;
+    padding: 25px;
     background: white;
     display: inline-block;
     border-radius: 50%;
