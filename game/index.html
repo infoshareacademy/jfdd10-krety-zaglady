@@ -101,11 +101,11 @@
         var basketWalkL = 0;
         var basketWalkR = 0;
         // PREDKOSC
-        var dTime = 2;
+        var dTime = 16;
         // STEROWANIE
         window.addEventListener('keydown', function (event) {
                 if (event.code === 'KeyZ') {
-                goLeft = true;
+                    goLeft = true;
                 if (event.code === 'KeyM') {
                     goRight = true;
                 }
@@ -121,15 +121,17 @@
             setInterval(function () {
                 if (goLeft) {
                     velocity = -1;
+                    position = -1
                 }
-                velocity = velocity * dTime,
+                velocity =  (velocity + position )* dTime,
                     0
-            });
+             });
             setInterval(function () {
                 if (goRight) {
                     velocity = 1;
+                    position = 1;
                 }
-                velocity = velocity * dTime,
+                velocity = (velocity + position ) * dTime,
                     0
             });
             // setInterval(function () {
