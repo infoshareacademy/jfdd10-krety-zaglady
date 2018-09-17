@@ -101,6 +101,8 @@
             var player = document.querySelector('.basket');
             var goLeft = false;
             var goRight = false;
+            //PREDKOSC PORUSZANIA SIE KOSZA
+            var speed = 6; //predkosc bedzie zalezna od poziomu/czasu jaki uplynoł
             // var basketWalkL = 0;
             // var basketWalkR = 0;
             // PREDKOSC
@@ -151,7 +153,7 @@
                 // });
                 console.log(parseInt(position), parseInt(velocity));
                 //ODEJMUJE OD KONTENERA SZEROKOSC KOSZA CO POWODUJE OGRANICZENIA Z OBU STRON
-                position = Math.min(Math.max(0, position + velocity), 940 - 80);
+                position = Math.min(Math.max(0, position + velocity * speed), 940 - 80);
                 // Render new  position
                 player.style.left = position + 'px';
             }, dTime)
