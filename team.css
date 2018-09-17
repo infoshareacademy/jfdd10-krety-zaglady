@@ -37,7 +37,8 @@
     background: url(gfx/kret-Ola.jpg) no-repeat center;
     background-size: 100%;
     border-radius: 50px;
-    box-shadow: 3px 10px 40px 10px black
+    box-shadow: 3px 10px 40px 10px black;
+    transition: background-image 0.8s ease-in-out;
 }
 .Ola.true {
     background: url(gfx/Ola.jpg) no-repeat center;
@@ -50,7 +51,8 @@
     background: url(gfx/kret-Balbina.jpg) no-repeat center;
     background-size: 100%;
     border-radius: 50px;
-    box-shadow: 3px 10px 40px 10px black
+    box-shadow: 3px 10px 40px 10px black;
+    transition: background-image 0.8s ease-in-out;
 }
 .Balbina.true {
     background: url(gfx/Balbina.jpg) no-repeat center;
@@ -62,7 +64,8 @@
     background: url(gfx/kret-Lukasz.jpg) no-repeat center;
     background-size: 100%;
     border-radius: 50px;
-    box-shadow: 3px 10px 40px 10px black
+    box-shadow: 3px 10px 40px 10px black;
+    transition: background-image 0.8s ease-in-out;
 }
 .Lukasz.true {
     background: url(gfx/Lukasz.jpg) no-repeat center;
@@ -74,7 +77,8 @@
     background: url(gfx/kret-Monika.jpg) no-repeat center;
     background-size: 100%;
     border-radius: 50px;
-    box-shadow: 3px 10px 40px 10px black
+    box-shadow: 3px 10px 40px 10px black;
+    transition: background-image 0.8s ease-in-out;
 }
 .Monika.true {
     background: url(gfx/Monika.jpg) no-repeat top;
