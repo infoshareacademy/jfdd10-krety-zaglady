@@ -101,30 +101,20 @@
             var player = document.querySelector('.basket');
             var goLeft = false;
             var goRight = false;
+            
             //PREDKOSC PORUSZANIA SIE KOSZA
             var speed = 6; //predkosc bedzie zalezna od poziomu/czasu jaki uplynoł
-            // var basketWalkL = 0;
-            // var basketWalkR = 0;
+
             // PREDKOSC
             var dTime = 16;
             var keyPressed = false;
+
             // STEROWANIE
             window.addEventListener('keydown', function (event) {
                     keyPressed = event.code;
-                    // if (event.code === 'KeyZ') {
-                    //     goLeft = true;
-                    // }
-                    // if (event.code === 'KeyM') {
-                    //     goRight = true;
-                    // }
                 })
                 window.addEventListener('keyup', function (event) {
                     keyPressed = false;
-                    // if (event.code === 'KeyZ')
-                    //     goLeft = false;
-                    // if (event.code === 'KeyM') {
-                    //     goRight = false;
-                    // }
                 });
                 // FUNKCJE WYKONAWCZE LEWO
                 setInterval(function () {
@@ -139,21 +129,18 @@
                     }else{
                         return false;
                     }
-                    // velocity =  (velocity + position )* dTime
-                    // velocity = (velocity + position );// * dTime
-                // });
-                // setInterval(function () {
-                //     if (goRight) {
-                //         basketWalkR = 0.05;
-                //     } else {
-                //         basketWalkR = 0.05;
-                //     }
-                //     basketWalkR = basketWalkR * dTime,
-                //         0
-                // });
+                
+                // setInterval(function() {
+                    document.querySelector('.level_window')
+                    document.createElement('div')
+                })
+                randomPlace();
+                // WYŚWIETLA W KONSOLI POZYCJE 
                 console.log(parseInt(position), parseInt(velocity));
+
                 //ODEJMUJE OD KONTENERA SZEROKOSC KOSZA CO POWODUJE OGRANICZENIA Z OBU STRON
                 position = Math.min(Math.max(0, position + velocity * speed), 940 - 80);
+
                 // Render new  position
                 player.style.left = position + 'px';
             }, dTime)
