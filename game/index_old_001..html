@@ -1,0 +1,166 @@
+<body>
+    <style>
+        .game {
+            /* display: flex;
+        flex-direction: column; */
+            margin-left: auto;
+            margin-right: auto;
+            /* padding-top: 2px; */
+            width: 1200px;
+            height: 800px;
+            background-color: gray;
+        }
+
+        .game_main {
+            display: flex;
+            flex-direction: column;
+            margin-left: auto;
+            margin-right: auto;
+            width: 990px;
+            height: 790px;
+            background-color: darkgray;
+        }
+
+        .game_main_window {
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 10px;
+            /* margin-top: 10px; */
+            width: 990px;
+            height: 650px;
+            background-color: darkgray;
+        }
+
+        .level_window {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin-left: auto;
+            margin-right: auto;
+            width: 95%;
+            height: 95%;
+            background-color: black;
+        }
+
+        .basket {
+            position: absolute;
+            bottom: 0;
+            left: 430px;
+            /* margin: auto; */
+            height: 40px;
+            width: 80px;
+            background-color: lawngreen;
+        }
+
+        .stats_window {
+            display: flex;
+            margin: auto;
+            margin-left: 10px;
+            margin-right: 10px;
+            width: 98%;
+            height: 120px;
+            background-color: darkgray;
+        }
+
+        .life {
+            margin: auto;
+            width: 30%;
+            height: 115px;
+            background-color: gray;
+        }
+
+        .hot_key {
+            margin: auto;
+            width: 30%;
+            height: 115px;
+            background-color: gray;
+        }
+
+        .scoore {
+            margin: auto;
+            width: 30%;
+            height: 115px;
+            background-color: gray;
+        }
+    </style>
+
+    <div class="game">
+        <div class="game_main">
+            <div class="game_main_window">
+                <div class="level_window">
+                    <div class="basket"></div>
+                </div>
+            </div>
+            <div class="stats_window">
+                <div class="life"></div>
+                <div class="hot_key"></div>
+                <div class="scoore">
+                    <!-- <h3>Mouse Position</h1>
+                    <h4 id="x_result">0</h2>
+                    <h4 id="y_result">0</h2> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // ZMIENNE
+        var position = 430;
+        var velocity = 0;
+        var player = document.querySelector('.basket');
+        var goLeft = false;
+        var goRight = false;
+
+        // PREDKOSC
+        var dTime = 16;
+        var keyPressed = false;
+
+        // ZAŁACZENIE STEROWANIA
+        window.addEventListener('keydown', function (event) {
+            keyPressed = event.code;
+        })
+        window.addEventListener('keyup', function (event) {
+            keyPressed = false
+        });
+        // FUNKCJE WYKONAWCZE STEROWANIA L/P
+        setInterval(function () {
+            if (keyPressed) {
+                if (keyPressed === 'KeyZ') {
+                    velocity = -1;
+                } else if (keyPressed === 'KeyM') {
+                    velocity = 1;
+                } else {
+                    return false;
+                }
+            } else {
+                return false;
+            }
+
+            console.log(parseInt(position), parseInt(velocity));
+            position = Math.min(Math.max(0, position + velocity), 940 - 80);
+            // position += velocity;
+            
+            // Render new car position
+            player.style.Left = position + 'px';
+        }, dTime)
+             // FUNKCJE WYKONAWCZE PRAWO
+             //offsetLeft
+
+//LOSOWANIE PRZEDMIOTOW
+    // var randomPlace = dokument.querySelector('.level_window');
+    //     matchRandom
+
+// ODCZYTYWANIE POZYCJI MYSZY
+// function readMouseMove(e){
+// 	var result_x = document.getElementById(x_result);
+// 	var result_y = document.getElementById(y_result);
+// 	result_x.innerHTML = e.clientX;
+// 	result_y.innerHTML = e.clientY;
+// }
+// document.onmousemove = readMouseMove;
+
+
+    </script>
+</body>
+
+</html>

@@ -9,10 +9,10 @@
     background-size: cover;
     height: 590px;
     background: #9DE1F7;
-    overflow:hidden;
+    overflow: hidden;
 }
 .hero-tlo1 {
-    animation: sungoin 5s ease 1s infinite alternate none;
+    animation: sungoin 10s ease 1s infinite alternate none;
     padding-top: 15;
     z-index: 10;
     background-image: url("gfx/paralaxa/happy-sun.png");
@@ -22,10 +22,12 @@
     background-repeat: no-repeat;
     background-size: 100px 100px;   
 }
-.hero-tlo3:hover {
+.hero-tlo1:hover {
     animation-play-state: paused;
+    animation: sunhappy 9s ease 1s infinite alternate none;
 }
 .hero-tlo2 {
+    pointer-events: none;
     animation: cloudson 5s ease 1s infinite alternate none;
     z-index: 5;
     margin-top: -400;
@@ -37,6 +39,7 @@
     background-repeat: repeat-x;
 }
 .hero-tlo3 {
+    pointer-events: none;
     z-index: 16;
     background-image: url("gfx/garden_png.png");
     position: absolute;
@@ -119,6 +122,20 @@
 50% { margin-left: 15% }
 75% { margin-left: 30% }
 100% { margin-left: 60% }
+}
+@keyframes sunhappy {
+    0% { transform: rotate(3deg)}
+    10% { transform: rotate(6deg)}
+    20% { transform: rotate(9deg)}
+    30% { transform: rotate(6deg)}
+    40% { transform: rotate(3deg)}
+    50% { transform: rotate(0deg)}
+    60% { transform: rotate(-3deg)}
+    70% { transform: rotate(-6deg)}
+    80% { transform: rotate(-9deg)}
+    90% { transform: rotate(-3deg)}
+    100% { transform: rotate(0deg)}
+    
 }
 
 @keyframes cloudson {
