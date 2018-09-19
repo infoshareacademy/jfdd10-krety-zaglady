@@ -67,3 +67,12 @@
     height: 115px;
     background-color: gray;
 }
+.fruit {
+    position: absolute;
+    top: 0;
+    left: 430px;
+    height: 30px;
+    width: 30px;
+    background-color: red;
+    border-radius: 50px;
+}
