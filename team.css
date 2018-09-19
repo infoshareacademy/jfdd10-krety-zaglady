@@ -65,7 +65,10 @@
     background-size: 100%;
     border-radius: 50px;
     box-shadow: 3px 10px 40px 10px black;
+<<<<<<< HEAD
     -webkit-transition: background-image 0.8s ease-in-out;
+=======
+>>>>>>> 70cd62261c01f29d37e20026f6d853719d558c27
     transition: background-image 0.8s ease-in-out;
 }
 .Lukasz.true {
@@ -78,7 +81,6 @@
     background-size: 100%;
     border-radius: 50px;
     box-shadow: 3px 10px 40px 10px black;
-    -webkit-transition: background-image 0.8s ease-in-out;
     transition: background-image 0.8s ease-in-out;
 }
 .Monika.true {

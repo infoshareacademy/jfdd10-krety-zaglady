@@ -1,5 +1,4 @@
 .hero {
-    /* justify-content: flex-start; */
     height: 700px;
     background-position: center;
     background-repeat: no-repeat;
@@ -7,17 +6,32 @@
     background-position-y: bottom;
     background-size: cover;
 }
-.box-product {
-
+.hero-title {
+    font-size: 40px;
+    letter-spacing: 10px;
+    text-shadow: 2px 2px 0px yellow;
 }
 .title {
     
     color: white;
     font-size: 30px;
     margin-left: 2vh;
-
 }
 .box-product{
     display: flex;
-    /* flex-direction: row-reverse; */
+    width: 550px;
+    min-width: 550px;
+}
+.product-info {
+    min-width: 240px ;
+    font-size: 30px;
+}
+.hero-tlo1 {
+    background-size: 300px 300px;
+}
+.hero-tlo3 {
+    background-size: 100%;
+}
+.link-form {
+    margin: 3vh 3vmin;
 }
