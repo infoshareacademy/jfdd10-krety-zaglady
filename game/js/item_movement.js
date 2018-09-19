@@ -1,3 +1,4 @@
+
 var levelWindow = document.querySelector('.level_window');
 var item = document.createElement('div');
 
@@ -9,7 +10,7 @@ var position = 0;
 
 setInterval (function () {
   position += 4;
-  item.style.marginTop = position + 'px';
+  item.style.top = position + 'px';
 }, 16)
 
 
