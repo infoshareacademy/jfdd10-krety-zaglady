@@ -8,7 +8,7 @@ fruit.classList.add('fruit');
 var position = 0;
 
 setInterval (function () {
-  position += 1;
+  position += 4;
   fruit.style.marginTop = position + 'px';
 }, 16)
 
