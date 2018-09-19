@@ -1,11 +1,8 @@
 <body>
     <style>
         .game {
-            /* display: flex;
-        flex-direction: column; */
             margin-left: auto;
             margin-right: auto;
-            /* padding-top: 2px; */
             width: 1200px;
             height: 800px;
             background-color: gray;
@@ -23,7 +20,6 @@
             margin-left: auto;
             margin-right: auto;
             padding-top: 10px;
-            /* margin-top: 10px; */
             width: 990px;
             height: 650px;
             background-color: darkgray;
@@ -42,7 +38,6 @@
             position: absolute;
             bottom: 0;
             left: 430px;
-            /* margin: auto; */
             height: 40px;
             width: 80px;
             background-color: lawngreen;
@@ -75,7 +70,6 @@
             background-color: gray;
         }
     </style>
-
     <div class="game">
         <div class="game_main">
             <div class="game_main_window">
@@ -90,38 +84,20 @@
             </div>
         </div>
     </div>
-
     <script type="text/javascript">
-        // ZMIENNE
         var position = 430;
         var velocity = 0;
         var player = document.querySelector('.basket');
         var goLeft = false;
         var goRight = false;
-        // var basketWalkL = 0;
-        // var basketWalkR = 0;
-        // PREDKOSC
         var dTime = 16;
         var keyPressed = false;
-        // STEROWANIE
         window.addEventListener('keydown', function (event) {
             keyPressed = event.code;
-            // if (event.code === 'KeyZ') {
-            //     goLeft = true;
-            // }
-            // if (event.code === 'KeyM') {
-            //     goRight = true;
-            // }
         })
         window.addEventListener('keyup', function (event) {
             keyPressed = false;
-            // if (event.code === 'KeyZ')
-            //     goLeft = false;
-            // if (event.code === 'KeyM') {
-            //     goRight = false;
-            // }
         });
-        // FUNKCJE WYKONAWCZE LEWO
         setInterval(function () {
             if (keyPressed) {
                 if (keyPressed === 'KeyZ') {
@@ -134,28 +110,10 @@
             } else {
                 return false;
             }
-            // velocity =  (velocity + position )* dTime
-            // velocity = (velocity + position );// * dTime
-            // });
-            // setInterval(function () {
-            //     if (goRight) {
-            //         basketWalkR = 0.05;
-            //     } else {
-            //         basketWalkR = 0.05;
-            //     }
-            //     basketWalkR = basketWalkR * dTime,
-            //         0
-            // });
             console.log(parseInt(position), parseInt(velocity));
-
-            position = Math.min(Math.max(0, position + velocity), 940 - 80);// * dTime;
-            // Render new car position
+            position = Math.min(Math.max(0, position + velocity), 940 - 80);
             player.style.left = position + 'px';
         }, dTime)
-             // FUNKCJE WYKONAWCZE PRAWO
-             //offsetLeft
-
-
     </script>
 </body>
 
