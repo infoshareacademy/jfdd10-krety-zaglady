@@ -1,3 +1,5 @@
+
+(function () {
 var position = 430;
 var velocity = 0;
 var player = document.querySelector('.basket');
@@ -23,7 +25,9 @@ setInterval(function () {
     } else {
         return false;
     }
-    console.log(parseInt(position), parseInt(velocity));
+    console.log(position, velocity)
+    
     position = Math.min(Math.max(0, position + velocity), 940 - 80);
     player.style.left = position + 'px';
 }, dTime)
+})()
