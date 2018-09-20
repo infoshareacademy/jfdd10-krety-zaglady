@@ -1,12 +1,15 @@
-
-var levelWindow = document.querySelector('.level_window');
+var board = document.querySelector('.level_window')
+var left = Math.floor(Math.random() * board.clientWidth);
 var item = document.createElement('div');
 
-levelWindow.appendChild(item);
+board.appendChild(item);
 
 item.classList.add('item');
 
 var position = 0;
+item.style.left = left + 'px';
+console.log(left)
+
 
 setInterval (function () {
   position += 4;
