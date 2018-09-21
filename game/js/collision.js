@@ -35,6 +35,7 @@
         var c = Math.sqrt(a * a + b * b);
         //console.log(itemRadius, basketRadius);
         if (c <= itemRadius + basketRadius) {
+            position = 0;
             console.log('MAMY KOLIZJĘ');
             // clearInterval(intervalId);
             return;
