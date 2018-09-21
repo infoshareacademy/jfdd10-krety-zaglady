@@ -1,6 +1,6 @@
 (function () {
   var board = document.querySelector('.level_window')
-  var left = Math.floor(Math.random() * board.clientWidth);
+  var left = 450; // Math.floor(Math.random() * board.clientWidth);
   var item = document.createElement('div');
 
   board.appendChild(item);
