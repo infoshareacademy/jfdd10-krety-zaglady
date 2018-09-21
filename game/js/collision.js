@@ -1,27 +1,53 @@
+(function () {
 
 
-// setInterval(function () {
-//     var basket = document.querySelector('.basket');
-//     var item = document.querySelector('.item');
-//     var basketPositionX = parseInt(window.getComputedStyle(basket).getPropertyValue('left'));
-//     var basketPositionY = parseInt(window.getComputedStyle(basket).getPropertyValue('bottom'));
-//     var basketRadius = parseInt(window.getComputedStyle(basket).getPropertyValue('width')) / 2;
-    
-//     var basketCenter = {
-//         x: basketPositionX + basketRadius,
-//         y: parseInt(window.getComputedStyle(basket).getPropertyValue('top')) + basketRadius
-//     }
-//     var itemCenter = {
-//         x: enemyPosition + enemyRadius,
-//         y: parseInt(window.getComputedStyle(enemy).getPropertyValue('top')) + enemyRadius
-//     }
 
-//     var b = itemCenter.x - basketCenter.x;
-//     var a = itemCenter.y - basketCenter.y;
-//     var c = Math.sqrt(a * a + b * b);
-//     if (c <= enemyRadius + basketRadius) {
-//         return;
-//     }
+    var intervalId = setInterval(function () {
+
+        var basket = document.querySelector('.basket');
+        var basketPosition = parseInt(window.getComputedStyle(basket).getPropertyValue('top'));
+        var basketRadius = parseInt(window.getComputedStyle(basket).getPropertyValue('height')) / 2;
+
+        //console.log({ basket, basketPosition, basketRadius })
+
+
+
+
+        var item = document.querySelector('.item');
+        var itemPosition = parseInt(window.getComputedStyle(item).getPropertyValue('top'));
+        var itemRadius = parseInt(window.getComputedStyle(item).getPropertyValue('height')) / 2;
+
+        //console.log({ item, itemPosition, itemRadius });
+
+        var basketCenter = {
+            y: basketPosition + basketRadius,
+            x: parseInt(window.getComputedStyle(basket).getPropertyValue('left')) + basketRadius
+
+        }
+
+        var itemCenter = {
+            y: itemPosition + itemRadius,
+            x: parseInt(window.getComputedStyle(item).getPropertyValue('left')) + itemRadius
+        }
+
+        var b = itemCenter.y - basketCenter.y;
+        var a = itemCenter.x - basketCenter.x;
+        var c = Math.sqrt(a * a + b * b);
+        //console.log(itemRadius, basketRadius);
+        if (c <= itemRadius + basketRadius) {
+            position = 0;
+            console.log('MAMY KOLIZJĘ');
+            // clearInterval(intervalId);
+            return;
+        }
+    }, 16);
+
+})()
+// setInterval(function () {    
+
+
+
+
 //     enemyPosition -= 1;
 //     enemy.style.left = enemyPosition + 'px';
 

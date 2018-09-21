@@ -1,3 +1,4 @@
+var position = 0;
 (function () {
   var board = document.querySelector('.level_window')
   var left = Math.floor(Math.random() * board.clientWidth);
@@ -7,7 +8,7 @@
 
   item.classList.add('item');
 
-  var position = 0;
+  
   item.style.left = left + 'px';
   console.log(left)
 
