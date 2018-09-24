@@ -4,7 +4,18 @@
 // - Sprawdzam czy koszyk koliduje z owocem
 // - Jeżeli koliduje to zliczam punkt i losuję nową pozycję owoca
 // - Jeżeli zderza się z ziemią, to losuję nową pozycję owoca i odejmuję życie
-// - Jeżeli skończyły mi się życia, to umieram
+// - Jeżeli skończyły mi się życia, to umieram\
+
+function keyPressed() { // czy kliknięcie musi być oddzielną funkcją?
+    var keyPressed = false;
+
+    window.addEventListener('keydown', function (event) {
+        keyPressed = event.code;
+    })
+    window.addEventListener('keyup', function (event) {
+        keyPressed = false;
+    });
+}
 
 function moveFruit(fruit) {
     var position = 0;
@@ -13,7 +24,24 @@ function moveFruit(fruit) {
 }
 
 function moveBasket(basket) {
+    
+    var basket = document.querySelector('.basket'); //czy trzeba tu deklarować zmienną basket?
+    var velocity = 0;
+    var position = 430;
 
+    if (keyPressed) { //jak odwołać się do funkcji keyPressed?
+        if (keyPressed === 'KeyZ') {
+            velocity = -1;
+        } else if (keyPressed === 'KeyM') {
+            velocity = 1;
+        } else {
+            return false;
+        }
+    } else {
+        return false;
+    }
+    position = Math.min(Math.max(0, position + velocity), 940 - 80);
+    basket.style.left = position + 'px';
 }
 
 /**
