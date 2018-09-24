@@ -1,0 +1,46 @@
+.main_window {
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    height: 700px;
+    background: gray;
+}
+.game_window {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 850px;
+    height: 650px;
+    overflow: hidden;
+    background: darkgray;
+}
+.triangle {
+    position: absolute;
+    top: 550px;
+    left: 350px;
+    border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid #b30;
+}
+.dor_left {
+    position: absolute;
+    width: 10px;
+    height: 100px;
+    top: 550px;
+    left: 0px;
+    background: darkorange;
+}
+.dor_right {
+    position: absolute;
+    width: 10px;
+    height: 100px;
+    top: 550px;
+    left: 840px;
+    background: darkorange;
+}
+.coin {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: blue;
+}
