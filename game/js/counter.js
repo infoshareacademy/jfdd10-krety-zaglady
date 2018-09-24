@@ -15,5 +15,7 @@
 // }
 
 var score = document.querySelector('.scoore');
+var startPoint = 0;
+
 
 
