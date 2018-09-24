@@ -36,6 +36,7 @@
         //console.log(itemRadius, basketRadius);
         if (c <= itemRadius + basketRadius) {
             position = 0;
+            left = Math.floor(Math.random() * board.clientWidth);
             console.log('MAMY KOLIZJĘ');
             // clearInterval(intervalId);
             return;
