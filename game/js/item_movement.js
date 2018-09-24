@@ -14,9 +14,11 @@ var position = 0;
 
 
   setInterval(function () {
-    position += 4;
+    position += 10;
+    if (position >= 617) {
+      position = 0;
+    }
     item.style.top = position + 'px';
   }, 16)
+  item.classList.left = left;
 })()
-
-
