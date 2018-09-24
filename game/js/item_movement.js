@@ -1,9 +1,9 @@
-var position = 0;
-var board = document.querySelector('.level_window')
-var left = Math.floor(Math.random() * board.clientWidth);
+
 (function () {
-  
-  
+  var position = 0;
+  var board = document.querySelector('.level_window')
+  var left = Math.floor(Math.random() * board.clientWidth);
+
   var item = document.createElement('div');
 
   board.appendChild(item);

@@ -1,3 +1,45 @@
+// Co 16ms:
+// - Przesuwam owoca
+// - Przesuwam koszyk
+// - Sprawdzam czy koszyk koliduje z owocem
+// - Jeżeli koliduje to zliczam punkt i losuję nową pozycję owoca
+// - Jeżeli zderza się z ziemią, to losuję nową pozycję owoca i odejmuję życie
+// - Jeżeli skończyły mi się życia, to umieram
+
+function moveFruit(fruit) {
+
+}
+
+function moveBasket(basket) {
+
+}
+
+/**
+ * Should return true/false
+ * 
+ * @param {x: number, y: number} a 
+ * @param {x: number, y: number} b 
+ */
+function collides(a, b) {
+    
+}
+
+function outOfBounds(a) {
+
+}
+
+function play() {
+    // - Utworzyć owoca w losowej pozycji na planszy
+    // - Znaleźć koszyk i ustawić go na środku planszy
+    // var basket = ......
+    setInterval(function () {
+        // moveBasket(basket);
+    }, 16);
+}
+
+play();
+
+
 
 (function () {
 var position = 430;
