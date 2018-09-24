@@ -33,14 +33,20 @@ function outOfBounds(position) {
 }
 
 function play() {
-    // - Utworzyć owoca w losowej pozycji na planszy
+    
     // - Znaleźć koszyk i ustawić go na środku planszy
-    // var basket = ......
+    var board = document.querySelector('.level_window')
     var basket = document.querySelector('.basket');
     var basketPosition = parseInt(window.getComputedStyle(basket).getPropertyValue('top'));
+    
+    
+    // - Utworzyć owoca w losowej pozycji na planszy
     var item = document.createElement('div');
+    var left = Math.floor(Math.random() * board.clientWidth);
     board.appendChild(item);
     item.classList.add('item');
+    item.style.left = left + "px";
+    
 
 
     setInterval(function () {
