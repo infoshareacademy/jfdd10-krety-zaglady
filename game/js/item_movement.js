@@ -1,4 +1,5 @@
 var position = 0;
+var itemSpeed = 3;
 (function () {
   var board = document.querySelector('.level_window')
   var left = Math.floor(Math.random() * board.clientWidth);
@@ -14,7 +15,7 @@ var position = 0;
 
 
   setInterval(function () {
-    position += 10;
+    position += itemSpeed;
     if (position >= 617) {
       position = 0;
     }
