@@ -7,6 +7,10 @@
 // - Jeżeli skończyły mi się życia, to umieram\
 var keyPressed
 var score = 0;
+var score = 0;
+var life = 3;
+var speed = 5;
+var itemSpeed = 3;
 function keyPressedHappened() {
   window.addEventListener('keydown', function (event) {
     keyPressed = event.code;
@@ -18,7 +22,7 @@ function keyPressedHappened() {
 
 function moveItem(item) {
   var position = parseFloat(window.getComputedStyle(item).top);
-  position += 10;
+  position += itemSpeed;
   item.style.top = position + 'px';
 }
 
@@ -30,9 +34,9 @@ function moveBasket(basket) {
 
   if (keyPressed) {
     if (keyPressed === 'KeyZ') {
-      velocity = -1;
+      velocity = -speed;
     } else if (keyPressed === 'KeyM') {
-        velocity = 1;
+        velocity = speed;
     } else {
       return false;
     }
@@ -103,13 +107,16 @@ function play() {
       var left = Math.floor(Math.random() * board.clientWidth);
       item.style.left = left + 'px';
       item.style.top = '0px';
-      score -= 1;
+      life -= 1;
+      document.querySelector(".life").innerHTML='LIFE: ' + life;
     }
     
     if (collides(elementToPosition(basket), elementToPosition(item))) {
       item.style.top = '0px';
       left = Math.floor(Math.random() * board.clientWidth);
       console.log('MAMY KOLIZJĘ');
+      score += 1;
+      document.querySelector(".scoore").innerHTML='PUNKTY: ' + score;
       return;
     }
   }, 16);
