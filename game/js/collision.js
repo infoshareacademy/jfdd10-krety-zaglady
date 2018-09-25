@@ -38,6 +38,9 @@ var score = 0;
             score += 1;
             console.log(score);
             document.querySelector(".scoore").innerHTML='PUNKTY ' + score;
+            if (score === 10) {
+                speed = 10;
+            }; 
             // document.querySelector(".scoore").inneText=score;
             return;
         }

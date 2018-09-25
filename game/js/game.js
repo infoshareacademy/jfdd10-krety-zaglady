@@ -1,3 +1,4 @@
+var speed = 5;
 
 (function () {
 var position = 430;
@@ -5,6 +6,7 @@ var velocity = 0;
 var player = document.querySelector('.basket');
 var dTime = 16;
 var keyPressed = false;
+
 window.addEventListener('keydown', function (event) {
     keyPressed = event.code;
 })
@@ -14,9 +16,9 @@ window.addEventListener('keyup', function (event) {
 setInterval(function () {
     if (keyPressed) {
         if (keyPressed === 'KeyZ') {
-            velocity = -5;
+            velocity = -speed;
         } else if (keyPressed === 'KeyM') {
-            velocity = 5;
+            velocity = speed;
         } else {
             return false;
         }
