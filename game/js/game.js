@@ -27,16 +27,16 @@ function moveItem(item) {
 }
 
 function moveBasket(basket) {
-    
-  
+
+
   var velocity = 0;
-  var position =  parseFloat(window.getComputedStyle(basket).left);
+  var position = parseFloat(window.getComputedStyle(basket).left);
 
   if (keyPressed) {
     if (keyPressed === 'KeyZ') {
       velocity = -speed;
     } else if (keyPressed === 'KeyM') {
-        velocity = speed;
+      velocity = speed;
     } else {
       return false;
     }
@@ -48,10 +48,10 @@ function moveBasket(basket) {
 }
 
 function elementToPosition(element) {
-  
+
   var elementPosition = parseInt(window.getComputedStyle(element).getPropertyValue('top'));
   var elementRadius = parseInt(window.getComputedStyle(element).getPropertyValue('height')) / 2;
-  
+
   var elementCenter = {
     x: parseInt(window.getComputedStyle(element).getPropertyValue('left')) + elementRadius,
     y: elementPosition + elementRadius,
@@ -68,7 +68,7 @@ function elementToPosition(element) {
 function collides(a, b) {
   var dx = a.x - b.x;
   var dy = a.y - b.y;
-  var hypot = Math.sqrt(dx*dx + dy*dy);
+  var hypot = Math.sqrt(dx * dx + dy * dy);
   if (hypot <= a.radius + b.radius) {
     return true;
   }
@@ -82,44 +82,53 @@ function outOfBounds(position) {
 }
 
 function play() {
-    
+
   // - Znaleźć koszyk i ustawić go na środku planszy
   var board = document.querySelector('.level_window')
   var basket = document.querySelector('.basket');
   basket.style.left = "430px"
-
+  var items = []
   keyPressedHappened()
-    
-  // - Utworzyć owoca w losowej pozycji na planszy
-  var item = document.createElement('div');
-  var left = Math.floor(Math.random() * board.clientWidth);
-  item.classList.add('item');
-  item.style.left = left + "px";
-  board.appendChild(item);
-    
 
+  // - Utworzyć owoca w losowej pozycji na planszy
+  function createFruit() {
+
+    var item = document.createElement('div');
+    var left = Math.floor(Math.random() * board.clientWidth);
+    item.classList.add('item');
+    item.style.left = left + "px";
+    board.appendChild(item);
+
+    items.push(item);
+  }
+
+  createFruit()
+  createFruit()
 
   setInterval(function () {
     moveBasket(basket);
-    moveItem(item);
-    var position = parseFloat(window.getComputedStyle(item).top);
-    if (outOfBounds(position)) {
-      var left = Math.floor(Math.random() * board.clientWidth);
-      item.style.left = left + 'px';
-      item.style.top = '0px';
-      life -= 1;
-      document.querySelector(".life").innerHTML='LIFE: ' + life;
-    }
+    items.forEach(function (item) {
+      moveItem(item);
+      var position = parseFloat(window.getComputedStyle(item).top);
+      if (outOfBounds(position)) {
+        var left = Math.floor(Math.random() * board.clientWidth);
+        item.style.left = left + 'px';
+        item.style.top = '0px';
+        life -= 1;
+        document.querySelector(".life").innerHTML = 'LIFE: ' + life;
+      }
+  
+      if (collides(elementToPosition(basket), elementToPosition(item))) {
+        left = Math.floor(Math.random() * board.clientWidth);
+        item.style.left = left + 'px';
+        item.style.top = '0px';
+        console.log('MAMY KOLIZJĘ');
+        score += 1;
+        document.querySelector(".scoore").innerHTML = 'PUNKTY: ' + score;
+        return;
+      }
+    })
     
-    if (collides(elementToPosition(basket), elementToPosition(item))) {
-      left = Math.floor(Math.random() * board.clientWidth);
-      item.style.left = left + 'px';
-      item.style.top = '0px';
-      console.log('MAMY KOLIZJĘ');
-      score += 1;
-      document.querySelector(".scoore").innerHTML='PUNKTY: ' + score;
-      return;
-    }
   }, 16);
 }
 
