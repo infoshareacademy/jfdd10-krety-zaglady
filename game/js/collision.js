@@ -1,4 +1,5 @@
 var score = 0;
+var life = 3;
 
 
 
@@ -6,7 +7,7 @@ var score = 0;
 
 
     var intervalId = setInterval(function () {
-
+        
         var basket = document.querySelector('.basket');
         var basketPosition = parseInt(window.getComputedStyle(basket).getPropertyValue('top'));
         var basketRadius = parseInt(window.getComputedStyle(basket).getPropertyValue('height')) / 2;
@@ -34,20 +35,24 @@ var score = 0;
         //console.log(itemRadius, basketRadius);
         if (c <= itemRadius + basketRadius) {
             position = 0;
-            //SCORE INPUT
             score += 1;
-            console.log(score);
-            document.querySelector(".scoore").innerHTML='PUNKTY ' + score;
+            // console.log(score);
+            // console.log(life);
+            document.querySelector(".scoore").innerHTML='PUNKTY: ' + score;
             if (score === 10) {
-                speed = 10;
-            }; 
-            // document.querySelector(".scoore").inneText=score;
+                itemSpeed = 10;
+            };
+            if (score === 20) {
+                itemSpeed = 20;
+            } 
+            if (score === 30) {
+                speed = 20;
+            }
             return;
         }
     }, 16);
 
 })()
-// setInterval(function () {    
 
 
 

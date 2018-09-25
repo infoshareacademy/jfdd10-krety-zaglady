@@ -13,13 +13,15 @@ var itemSpeed = 3;
   item.style.left = left + 'px';
   console.log(left)
 
-
   setInterval(function () {
     position += itemSpeed;
     if (position >= 617) {
       position = 0;
+      life += -1;
+      document.querySelector(".life").innerHTML='LIFE: ' + life;
     }
     item.style.top = position + 'px';
   }, 16)
   item.classList.left = left;
+  
 })()
