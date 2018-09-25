@@ -107,8 +107,9 @@ function play() {
     }
     
     if (collides(elementToPosition(basket), elementToPosition(item))) {
-      item.style.top = '0px';
       left = Math.floor(Math.random() * board.clientWidth);
+      item.style.left = left + 'px';
+      item.style.top = '0px';
       console.log('MAMY KOLIZJĘ');
       return;
     }
