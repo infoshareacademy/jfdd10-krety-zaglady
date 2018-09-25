@@ -6,6 +6,7 @@
 // - Jeżeli zderza się z ziemią, to losuję nową pozycję owoca i odejmuję życie
 // - Jeżeli skończyły mi się życia, to umieram\
 var keyPressed
+var score = 0;
 function keyPressedHappened() {
   window.addEventListener('keydown', function (event) {
     keyPressed = event.code;
@@ -15,10 +16,10 @@ function keyPressedHappened() {
   });
 }
 
-function moveFruit(fruit) {
-  var position = parseFloat(window.getComputedStyle(fruit).top);
+function moveItem(item) {
+  var position = parseFloat(window.getComputedStyle(item).top);
   position += 10;
-  fruit.style.top = position + 'px';
+  item.style.top = position + 'px';
 }
 
 function moveBasket(basket) {
@@ -42,14 +43,32 @@ function moveBasket(basket) {
   basket.style.left = position + 'px';
 }
 
+function elementToPosition(element) {
+  
+  var elementPosition = parseInt(window.getComputedStyle(element).getPropertyValue('top'));
+  var elementRadius = parseInt(window.getComputedStyle(element).getPropertyValue('height')) / 2;
+  
+  var elementCenter = {
+    x: parseInt(window.getComputedStyle(element).getPropertyValue('left')) + elementRadius,
+    y: elementPosition + elementRadius,
+    radius: elementRadius
+  }
+  return elementCenter;
+}
 /**
  * Should return true/false
  * 
- * @param {x: number, y: number} a 
- * @param {x: number, y: number} b 
+ * @param {x: number, y: number, radius: number} a 
+ * @param {x: number, y: number, radius: number} b 
  */
 function collides(a, b) {
-
+  var dx = a.x - b.x;
+  var dy = a.y - b.y;
+  var hypot = Math.sqrt(dx*dx + dy*dy);
+  if (hypot <= a.radius + b.radius) {
+    return true;
+  }
+  return false;
 }
 
 function outOfBounds(position) {
@@ -78,7 +97,21 @@ function play() {
 
   setInterval(function () {
     moveBasket(basket);
-    moveFruit(item)
+    moveItem(item);
+    var position = parseFloat(window.getComputedStyle(item).top);
+    if (outOfBounds(position)) {
+      var left = Math.floor(Math.random() * board.clientWidth);
+      item.style.left = left + 'px';
+      item.style.top = '0px';
+      score -= 1;
+    }
+    
+    if (collides(elementToPosition(basket), elementToPosition(item))) {
+      position = 0;
+      left = Math.floor(Math.random() * board.clientWidth);
+      console.log('MAMY KOLIZJĘ');
+      return;
+    }
   }, 16);
 }
 
