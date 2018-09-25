@@ -1,5 +1,8 @@
-(function () {
+var score = 0;
 
+
+
+(function () {
 
 
     var intervalId = setInterval(function () {
@@ -7,11 +10,6 @@
         var basket = document.querySelector('.basket');
         var basketPosition = parseInt(window.getComputedStyle(basket).getPropertyValue('top'));
         var basketRadius = parseInt(window.getComputedStyle(basket).getPropertyValue('height')) / 2;
-
-        //console.log({ basket, basketPosition, basketRadius })
-
-
-
 
         var item = document.querySelector('.item');
         var itemPosition = parseInt(window.getComputedStyle(item).getPropertyValue('top'));
@@ -36,8 +34,11 @@
         //console.log(itemRadius, basketRadius);
         if (c <= itemRadius + basketRadius) {
             position = 0;
-            console.log('MAMY KOLIZJĘ');
-            // clearInterval(intervalId);
+            //SCORE INPUT
+            score += 1;
+            console.log(score);
+            document.querySelector(".scoore").innerHTML='PUNKTY ' + score;
+            // document.querySelector(".scoore").inneText=score;
             return;
         }
     }, 16);
