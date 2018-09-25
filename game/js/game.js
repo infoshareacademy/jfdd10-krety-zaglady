@@ -107,7 +107,7 @@ function play() {
     }
     
     if (collides(elementToPosition(basket), elementToPosition(item))) {
-      position = 0;
+      item.style.top = '0px';
       left = Math.floor(Math.random() * board.clientWidth);
       console.log('MAMY KOLIZJĘ');
       return;
