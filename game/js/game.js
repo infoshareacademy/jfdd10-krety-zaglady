@@ -1,33 +1,153 @@
-
-(function () {
-var position = 430;
-var velocity = 0;
-var player = document.querySelector('.basket');
-var goLeft = false;
-var goRight = false;
-var dTime = 16;
-var keyPressed = false;
-window.addEventListener('keydown', function (event) {
+// Co 16ms:
+// - Przesuwam owoca
+// - Przesuwam koszyk
+// - Sprawdzam czy koszyk koliduje z owocem
+// - Jeżeli koliduje to zliczam punkt i losuję nową pozycję owoca
+// - Jeżeli zderza się z ziemią, to losuję nową pozycję owoca i odejmuję życie
+// - Jeżeli skończyły mi się życia, to umieram\
+var keyPressed
+var score = 0;
+function keyPressedHappened() {
+  window.addEventListener('keydown', function (event) {
     keyPressed = event.code;
-})
-window.addEventListener('keyup', function (event) {
+  })
+  window.addEventListener('keyup', function (event) {
     keyPressed = false;
-});
-setInterval(function () {
-    if (keyPressed) {
-        if (keyPressed === 'KeyZ') {
-            velocity = -1;
-        } else if (keyPressed === 'KeyM') {
-            velocity = 1;
-        } else {
-            return false;
-        }
-    } else {
-        return false;
-    }
-    console.log(position, velocity)
+  });
+}
+
+function moveItem(item) {
+  var position = parseFloat(window.getComputedStyle(item).top);
+  position += 10;
+  item.style.top = position + 'px';
+}
+
+function moveBasket(basket) {
     
-    position = Math.min(Math.max(0, position + velocity), 940 - 80);
-    player.style.left = position + 'px';
-}, dTime)
-})()
+  
+  var velocity = 0;
+  var position =  parseFloat(window.getComputedStyle(basket).left);
+
+  if (keyPressed) {
+    if (keyPressed === 'KeyZ') {
+      velocity = -1;
+    } else if (keyPressed === 'KeyM') {
+        velocity = 1;
+    } else {
+      return false;
+    }
+  } else {
+    return false;
+  }
+  position = Math.min(Math.max(0, position + velocity), 940 - 80);
+  basket.style.left = position + 'px';
+}
+
+function elementToPosition(element) {
+  
+  var elementPosition = parseInt(window.getComputedStyle(element).getPropertyValue('top'));
+  var elementRadius = parseInt(window.getComputedStyle(element).getPropertyValue('height')) / 2;
+  
+  var elementCenter = {
+    x: parseInt(window.getComputedStyle(element).getPropertyValue('left')) + elementRadius,
+    y: elementPosition + elementRadius,
+    radius: elementRadius
+  }
+  return elementCenter;
+}
+/**
+ * Should return true/false
+ * 
+ * @param {x: number, y: number, radius: number} a 
+ * @param {x: number, y: number, radius: number} b 
+ */
+function collides(a, b) {
+  var dx = a.x - b.x;
+  var dy = a.y - b.y;
+  var hypot = Math.sqrt(dx*dx + dy*dy);
+  if (hypot <= a.radius + b.radius) {
+    return true;
+  }
+  return false;
+}
+
+function outOfBounds(position) {
+  if (position >= 617) {
+    return true;
+  }
+}
+
+function play() {
+    
+  // - Znaleźć koszyk i ustawić go na środku planszy
+  var board = document.querySelector('.level_window')
+  var basket = document.querySelector('.basket');
+  basket.style.left = "430px"
+
+  keyPressedHappened()
+    
+  // - Utworzyć owoca w losowej pozycji na planszy
+  var item = document.createElement('div');
+  var left = Math.floor(Math.random() * board.clientWidth);
+  item.classList.add('item');
+  item.style.left = left + "px";
+  board.appendChild(item);
+    
+
+
+  setInterval(function () {
+    moveBasket(basket);
+    moveItem(item);
+    var position = parseFloat(window.getComputedStyle(item).top);
+    if (outOfBounds(position)) {
+      var left = Math.floor(Math.random() * board.clientWidth);
+      item.style.left = left + 'px';
+      item.style.top = '0px';
+      score -= 1;
+    }
+    
+    if (collides(elementToPosition(basket), elementToPosition(item))) {
+      item.style.top = '0px';
+      left = Math.floor(Math.random() * board.clientWidth);
+      console.log('MAMY KOLIZJĘ');
+      return;
+    }
+  }, 16);
+}
+
+play();
+
+//------------------------------------------------------------------------------------
+
+// (function () {
+//     var position = 430;
+//     var velocity = 0;
+//     var player = document.querySelector('.basket');
+//     var goLeft = false;
+//     var goRight = false;
+//     var dTime = 16;
+//     var keyPressed = false;
+//     window.addEventListener('keydown', function (event) {
+//         keyPressed = event.code;
+//     })
+//     window.addEventListener('keyup', function (event) {
+//         keyPressed = false;
+//     });
+//     setInterval(function () {
+//         if (keyPressed) {
+//             if (keyPressed === 'KeyZ') {
+//                 velocity = -1;
+//             } else if (keyPressed === 'KeyM') {
+//                 velocity = 1;
+//             } else {
+//                 return false;
+//             }
+//         } else {
+//             return false;
+//         }
+//         console.log(position, velocity)
+
+//         position = Math.min(Math.max(0, position + velocity), 940 - 80);
+//         player.style.left = position + 'px';
+//     }, dTime)
+// })()
