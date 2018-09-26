@@ -73,3 +73,55 @@
     display: flex;
 justify-content: center;
 }
+
+.introScreen {
+    position: absolute;
+    z-index: 100;
+    width: 600px;
+    height: 400px;
+    background-color: pink;
+}
+
+.introScreenContent {
+    width: 400px;
+    height: 200px;
+    padding: 20px;
+    background-color: white;
+    margin: 80 auto;
+    text-align: center;
+}
+
+.button {
+    padding: 10px;
+    border-radius: 10px;
+    width: 100px;
+    text-align: center;
+    cursor: hand;
+    cursor: pointer;
+    font-size: 14pt;
+    background-color: #888888;
+    color: white;
+    margin: 0 auto;
+}
+
+.button:hover {
+background-color: #555555;
+}
+
+/* 
+.endScreen {
+    position: absolute;
+    z-index: 101;
+    width: 600px;
+    height: 400px;
+    background-color: green;
+}
+
+.endScreenContent {
+    width: 400px;
+    height: 200px;
+    padding: 20px;
+    background-color: white;
+    margin: 80 auto;
+    text-align: center;
+} */
