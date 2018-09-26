@@ -1,7 +1,7 @@
 function startGame() {
-document.getElementsByClassName('introScreen').style.display = 'none';
+document.getElementByClassName('introScreen').style.display = 'none';
 }
 
 function replay() {
-    document.getElementsByClassName('endScreen').style.display = 'none';
+    document.getElementByClassName('endScreen').style.display = 'none';
     }
