@@ -108,9 +108,16 @@ function play() {
   // item.classList.add('item');
   // item.style.left = left + "px";
   // board.appendChild(item);
+ 
   var item = createItem();
   putItemOnBoard(item, board);  
 
+  // setInterval (function () {
+  //   var item = createItem();
+  //   putItemOnBoard(item, board);
+  //   moveItem(item); 
+  // }, 1500)
+  
 
   setInterval(function () {
     moveBasket(basket);
