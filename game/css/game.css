@@ -82,6 +82,7 @@ justify-content: center;
     width: 600px;
     height: 400px;
     background-color: pink;
+    display: none;
 }
 
 .introScreenContent {
@@ -97,7 +98,7 @@ justify-content: center;
     text-align: center;
 }
 
-.buttonStart {
+.button {
     position: absolute;
     top: 200px;
     left: 240px;
