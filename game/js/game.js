@@ -94,11 +94,10 @@ function play() {
   function createFruit() {
 
     var item = document.createElement('div');
-    var left = Math.floor(Math.random() * board.clientWidth);
+    var left = Math.floor(Math.random() * (board.clientWidth - elementToPosition(item).radius * 2) );
     item.classList.add('item');
     item.style.left = left + "px";
     board.appendChild(item);
-
     items.push(item);
   }
 
