@@ -20,6 +20,18 @@ function keyPressedHappened() {
   });
 }
 
+function createItem() {
+  var item = document.createElement('div');
+  item.classList.add('item');
+  item.style.top = "0px";
+  return item;
+}
+
+function putItemOnBoard(item, board) {
+  item.style.left = Math.random() * board.clientWidth;
+  board.appendChild(item);
+}
+
 function moveItem(item) {
   var position = parseFloat(window.getComputedStyle(item).top);
   position += itemSpeed;
@@ -91,12 +103,13 @@ function play() {
   keyPressedHappened()
     
   // - Utworzyć owoca w losowej pozycji na planszy
-  var item = document.createElement('div');
-  var left = Math.floor(Math.random() * board.clientWidth);
-  item.classList.add('item');
-  item.style.left = left + "px";
-  board.appendChild(item);
-    
+  // var item = document.createElement('div');
+  // var left = Math.floor(Math.random() * board.clientWidth);
+  // item.classList.add('item');
+  // item.style.left = left + "px";
+  // board.appendChild(item);
+  var item = createItem();
+  putItemOnBoard(item, board);  
 
 
   setInterval(function () {
