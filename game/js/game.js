@@ -6,6 +6,7 @@
 // - Jeżeli zderza się z ziemią, to losuję nową pozycję owoca i odejmuję życie
 // - Jeżeli skończyły mi się życia, to umieram\
 var keyPressed
+var id;
 var score = 0;
 var score = 0;
 var life = 3;
@@ -20,6 +21,14 @@ function keyPressedHappened() {
   });
 }
 
+var fruiTs = ["fruit1", "fruit2", "fruit3"];
+
+//console.log(randomFruit);
+//console.log(fruiTs[randomFruit]);
+
+
+
+
 function moveItem(item) {
   var position = parseFloat(window.getComputedStyle(item).top);
   position += itemSpeed;
@@ -27,8 +36,6 @@ function moveItem(item) {
 }
 
 function moveBasket(basket) {
-
-
   var velocity = 0;
   var position = parseFloat(window.getComputedStyle(basket).left);
 
@@ -99,12 +106,34 @@ function play() {
     item.style.left = left + "px";
     board.appendChild(item);
     items.push(item);
+    
+
   }
 
   createFruit()
   createFruit()
+  createFruit()
 
-  setInterval(function () {
+  function changeColor(element) {
+    var randomFruit = Math.floor(Math.random() * fruiTs.length );
+
+  if(fruiTs[randomFruit] === "fruit1") {
+    element.classList.add("fruit1");
+    }
+    
+    if(fruiTs[randomFruit] === "fruit2") {
+      element.classList.add("fruit2");
+    }
+    
+    
+    if(fruiTs[randomFruit] === "fruit3") {
+      element.classList.add("fruit3");
+    }
+  }
+
+
+
+  id = setInterval(function () {
     moveBasket(basket);
     items.forEach(function (item) {
       moveItem(item);
@@ -114,7 +143,11 @@ function play() {
         item.style.left = left + 'px';
         item.style.top = '0px';
         life -= 1;
+        if (life < 1) {
+          stopGame();
+        }
         document.querySelector(".life").innerHTML = 'LIFE: ' + life;
+        changeColor(item);
       }
   
       if (collides(elementToPosition(basket), elementToPosition(item))) {
@@ -124,7 +157,7 @@ function play() {
         console.log('MAMY KOLIZJĘ');
         score += 1;
         document.querySelector(".scoore").innerHTML = 'PUNKTY: ' + score;
-        return;
+        changeColor(item);
       }
     })
     

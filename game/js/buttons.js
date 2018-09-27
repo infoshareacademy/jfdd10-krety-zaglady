@@ -8,10 +8,19 @@ function endScreenAppears() {
     endScreen.style.display = 'block';
 }
 
+function stopGame() {
+    clearInterval(id)
+    var items = document.querySelectorAll('.item')
+    items.forEach(function (item) {
+        item.remove()
+    })
+    endScreenAppears()
+}
+
 introScreenAppears()
 
 window.addEventListener('click', function (event) {
-    
+
     if (event.target.classList.contains('button')) {
         var introScreen = document.querySelector('.introScreen');
         var endScreen = document.querySelector('.endScreen');
@@ -21,6 +30,8 @@ window.addEventListener('click', function (event) {
     }
 })
 
-setTimeout(function() {
-    endScreenAppears()
-}, 3000)
+
+// setTimeout(function () {
+//     endScreenAppears()
+//     stopGame()
+// }, 3000)

@@ -1,3 +1,16 @@
+.fruit1 {
+    background-color: blue;
+}
+
+.fruit2 {
+    background-color: yellow;
+}
+
+.fruit3 {
+    background-color: green;
+}
+
+
 .game {
     margin-left: auto;
     margin-right: auto;
@@ -162,7 +175,7 @@
     left: 100px;
     top: 170px;
     width: 400px;
-    height: 200px;
+    height: 50px;
     box-sizing: border-box;
     padding: 10px;
     margin: 80 auto;
