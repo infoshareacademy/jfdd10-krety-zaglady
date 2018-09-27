@@ -71,7 +71,7 @@
     color:  white;
     font-size: 30px;
     display: flex;
-justify-content: center;
+    justify-content: center;
 }
 
 .introScreen {
@@ -81,8 +81,8 @@ justify-content: center;
     top: 108px;
     width: 600px;
     height: 400px;
-    background-color: pink;
-    display: none;
+    background-color: rgb(19, 212, 212);
+    border-radius: 10px;
 }
 
 .introScreenContent {
@@ -96,9 +96,79 @@ justify-content: center;
     background-color: white;
     margin: 80 auto;
     text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    background: rgba(255,255,255,0.5);
+    border-radius:10px;
 }
 
 .button {
+    position: absolute;
+    top: 230px;
+    left: 240px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100px;
+    text-align: center;
+    cursor: hand;
+    cursor: pointer;
+    font-size: 14pt;
+    color: white;
+    margin: 0 auto;
+    background-color: rgba(83, 197, 2, 0.925);
+    border-bottom: 5px solid #669644;
+    text-shadow: 0px -2px #669644;
+
+}
+
+.button:hover {
+    background-color:  rgb(125, 185, 82);
+    border-bottom: 5px solid #669644;
+    text-shadow: 0px -2px #669644;
+}
+
+
+/* .endScreen {
+    position: absolute;
+    z-index: 101;
+    left: 170px;
+    top: 108px;
+    width: 600px;
+    height: 400px;
+    background-color: rgb(19, 212, 212);
+    border-radius: 10px;
+} 
+
+.endScreenContent {
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    width: 400px;
+    height: 200px;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: white;
+    margin: 80 auto;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    background: rgba(255,255,255,0.5);
+    border-radius: 10px;
+}
+
+.endScore {
+    position: absolute;
+    left: 100px;
+    top: 170px;
+    width: 400px;
+    height: 200px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 80 auto;
+    text-align: center;
+} */
+
+.buttonHS {
     position: absolute;
     top: 200px;
     left: 240px;
@@ -113,25 +183,3 @@ justify-content: center;
     color: white;
     margin: 0 auto;
 }
-
-.button:hover {
-background-color: #555555;
-}
-
-/* 
-.endScreen {
-    position: absolute;
-    z-index: 101;
-    width: 600px;
-    height: 400px;
-    background-color: green;
-}
-
-.endScreenContent {
-    width: 400px;
-    height: 200px;
-    padding: 20px;
-    background-color: white;
-    margin: 80 auto;
-    text-align: center;
-} */
