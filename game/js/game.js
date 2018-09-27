@@ -20,6 +20,10 @@ function keyPressedHappened() {
   });
 }
 
+var fruiTs = [fruit1, fruit2, fruit3];
+
+
+
 function moveItem(item) {
   var position = parseFloat(window.getComputedStyle(item).top);
   position += itemSpeed;
