@@ -22,6 +22,9 @@ function keyPressedHappened() {
 
 var fruiTs = ["fruit1", "fruit2", "fruit3"];
 var randomFruit = Math.floor(Math.random() * fruiTs.length );
+//console.log(randomFruit);
+//console.log(fruiTs[randomFruit]);
+
 
 
 
@@ -108,6 +111,22 @@ function play() {
 
   createFruit()
   createFruit()
+
+  
+  if(fruiTs[randomFruit] === "fruit1") {
+    document.querySelector(".item").classList.add("fruit1");
+    }
+    
+    if(fruiTs[randomFruit] === "fruit2") {
+      document.querySelector(".item").classList.add("fruit2");
+    }
+    
+    
+    if(fruiTs[randomFruit] === "fruit3") {
+      document.querySelector(".item").classList.add("fruit3");
+    }
+    
+
 
   setInterval(function () {
     moveBasket(basket);
