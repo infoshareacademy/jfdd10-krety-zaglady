@@ -6,6 +6,7 @@
 // - Jeżeli zderza się z ziemią, to losuję nową pozycję owoca i odejmuję życie
 // - Jeżeli skończyły mi się życia, to umieram\
 var keyPressed
+var id;
 var score = 0;
 var score = 0;
 var life = 3;
@@ -104,7 +105,7 @@ function play() {
   createFruit()
   createFruit()
 
-  setInterval(function () {
+  id = setInterval(function () {
     moveBasket(basket);
     items.forEach(function (item) {
       moveItem(item);

@@ -8,6 +8,11 @@ function endScreenAppears() {
     endScreen.style.display = 'block';
 }
 
+function stopGame(){
+    clearInterval(id)
+    
+}
+
 introScreenAppears()
 
 window.addEventListener('click', function (event) {
@@ -23,4 +28,5 @@ window.addEventListener('click', function (event) {
 
 setTimeout(function() {
     endScreenAppears()
+    stopGame()
 }, 3000)
