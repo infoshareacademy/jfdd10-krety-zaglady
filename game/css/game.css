@@ -128,7 +128,7 @@
 }
 
 
-/* .endScreen {
+.endScreen {
     position: absolute;
     z-index: 101;
     left: 170px;
@@ -137,6 +137,7 @@
     height: 400px;
     background-color: rgb(19, 212, 212);
     border-radius: 10px;
+    display: none;
 } 
 
 .endScreenContent {
@@ -166,9 +167,9 @@
     padding: 10px;
     margin: 80 auto;
     text-align: center;
-} */
+}
 
-.buttonHS {
+/* .buttonHS {
     position: absolute;
     top: 200px;
     left: 240px;
@@ -182,4 +183,4 @@
     background-color: #888888;
     color: white;
     margin: 0 auto;
-}
+} */
