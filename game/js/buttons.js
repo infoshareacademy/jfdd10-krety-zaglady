@@ -10,7 +10,10 @@ function endScreenAppears() {
 
 function stopGame(){
     clearInterval(id)
-    
+    var items = document.querySelectorAll('.item')
+    items.forEach(function(item) {
+        item.remove()
+    })
 }
 
 introScreenAppears()
