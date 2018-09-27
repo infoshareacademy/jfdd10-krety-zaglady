@@ -21,7 +21,7 @@ function keyPressedHappened() {
 }
 
 var fruiTs = ["fruit1", "fruit2", "fruit3"];
-var randomFruit = Math.floor(Math.random() * fruiTs.length );
+
 //console.log(randomFruit);
 //console.log(fruiTs[randomFruit]);
 
@@ -107,28 +107,31 @@ function play() {
     item.style.left = left + "px";
     board.appendChild(item);
     items.push(item);
+    
+
   }
 
   createFruit()
   createFruit()
+  createFruit()
 
-  function changeColor() {
+  function changeColor(element) {
+    var randomFruit = Math.floor(Math.random() * fruiTs.length );
 
   if(fruiTs[randomFruit] === "fruit1") {
-    document.querySelector(".item").classList.add("fruit1");
+    element.classList.add("fruit1");
     }
     
     if(fruiTs[randomFruit] === "fruit2") {
-      document.querySelector(".item").classList.add("fruit2");
+      element.classList.add("fruit2");
     }
     
     
     if(fruiTs[randomFruit] === "fruit3") {
-      document.querySelector(".item").classList.add("fruit3");
+      element.classList.add("fruit3");
     }
   }
 
-changeColor();
 
 
   setInterval(function () {
@@ -142,6 +145,7 @@ changeColor();
         item.style.top = '0px';
         life -= 1;
         document.querySelector(".life").innerHTML = 'LIFE: ' + life;
+        changeColor(item);
       }
   
       if (collides(elementToPosition(basket), elementToPosition(item))) {
@@ -151,7 +155,7 @@ changeColor();
         console.log('MAMY KOLIZJĘ');
         score += 1;
         document.querySelector(".scoore").innerHTML = 'PUNKTY: ' + score;
-        return;
+        changeColor(item);
       }
     })
     
