@@ -112,7 +112,8 @@ function play() {
   createFruit()
   createFruit()
 
-  
+  function changeColor() {
+
   if(fruiTs[randomFruit] === "fruit1") {
     document.querySelector(".item").classList.add("fruit1");
     }
@@ -125,7 +126,9 @@ function play() {
     if(fruiTs[randomFruit] === "fruit3") {
       document.querySelector(".item").classList.add("fruit3");
     }
-    
+  }
+
+changeColor();
 
 
   setInterval(function () {
