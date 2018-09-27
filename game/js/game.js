@@ -22,8 +22,7 @@ function keyPressedHappened() {
 
 var fruiTs = ["fruit1", "fruit2", "fruit3"];
 var randomFruit = Math.floor(Math.random() * fruiTs.length );
-console.log(randomFruit);
-console.log(fruiTs[randomFruit]);
+
 
 
 function moveItem(item) {
