@@ -71,17 +71,18 @@
     color:  white;
     font-size: 30px;
     display: flex;
-justify-content: center;
+    justify-content: center;
 }
 
-/* .introScreen {
+.introScreen {
     position: absolute;
     z-index: 100;
     left: 170px;
     top: 108px;
     width: 600px;
     height: 400px;
-    background-color: pink;
+    background-color: rgb(19, 212, 212);
+    border-radius: 10px;
 }
 
 .introScreenContent {
@@ -96,7 +97,10 @@ justify-content: center;
     margin: 80 auto;
     text-align: center;
     font-size: 30px;
-} */
+    font-weight: bold;
+    background: rgba(255,255,255,0.5);
+    border-radius:10px;
+}
 
 .button {
     position: absolute;
@@ -109,25 +113,31 @@ justify-content: center;
     cursor: hand;
     cursor: pointer;
     font-size: 14pt;
-    background-color: #888888;
     color: white;
     margin: 0 auto;
+    background-color: rgba(83, 197, 2, 0.925);
+    border-bottom: 5px solid #669644;
+    text-shadow: 0px -2px #669644;
+
 }
 
 .button:hover {
-background-color: #555555;
+    background-color:  rgb(125, 185, 82);
+    border-bottom: 5px solid #669644;
+    text-shadow: 0px -2px #669644;
 }
 
 
-.endScreen {
+/* .endScreen {
     position: absolute;
     z-index: 101;
     left: 170px;
     top: 108px;
     width: 600px;
     height: 400px;
-    background-color: green;
-}
+    background-color: rgb(19, 212, 212);
+    border-radius: 10px;
+} 
 
 .endScreenContent {
     position: absolute;
@@ -141,6 +151,9 @@ background-color: #555555;
     margin: 80 auto;
     text-align: center;
     font-size: 30px;
+    font-weight: bold;
+    background: rgba(255,255,255,0.5);
+    border-radius: 10px;
 }
 
 .endScore {
@@ -153,7 +166,7 @@ background-color: #555555;
     padding: 10px;
     margin: 80 auto;
     text-align: center;
-}
+} */
 
 .buttonHS {
     position: absolute;
