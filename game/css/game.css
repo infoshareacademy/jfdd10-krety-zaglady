@@ -137,6 +137,7 @@
     height: 400px;
     background-color: rgb(19, 212, 212);
     border-radius: 10px;
+    display: none;
 } 
 
 .endScreenContent {
