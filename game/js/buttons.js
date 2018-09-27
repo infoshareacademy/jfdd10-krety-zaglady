@@ -26,6 +26,8 @@ window.addEventListener('click', function (event) {
         var endScreen = document.querySelector('.endScreen');
         introScreen.style.display = 'none';
         endScreen.style.display = 'none';
+        life = 3;
+        score = 0;
         play();
     }
 })
