@@ -20,6 +20,14 @@ function keyPressedHappened() {
   });
 }
 
+var fruiTs = ["fruit1", "fruit2", "fruit3"];
+
+//console.log(randomFruit);
+//console.log(fruiTs[randomFruit]);
+
+
+
+
 function moveItem(item) {
   var position = parseFloat(window.getComputedStyle(item).top);
   position += itemSpeed;
@@ -99,10 +107,32 @@ function play() {
     item.style.left = left + "px";
     board.appendChild(item);
     items.push(item);
+    
+
   }
 
   createFruit()
   createFruit()
+  createFruit()
+
+  function changeColor(element) {
+    var randomFruit = Math.floor(Math.random() * fruiTs.length );
+
+  if(fruiTs[randomFruit] === "fruit1") {
+    element.classList.add("fruit1");
+    }
+    
+    if(fruiTs[randomFruit] === "fruit2") {
+      element.classList.add("fruit2");
+    }
+    
+    
+    if(fruiTs[randomFruit] === "fruit3") {
+      element.classList.add("fruit3");
+    }
+  }
+
+
 
   setInterval(function () {
     moveBasket(basket);
@@ -115,6 +145,7 @@ function play() {
         item.style.top = '0px';
         life -= 1;
         document.querySelector(".life").innerHTML = 'LIFE: ' + life;
+        changeColor(item);
       }
   
       if (collides(elementToPosition(basket), elementToPosition(item))) {
@@ -124,7 +155,7 @@ function play() {
         console.log('MAMY KOLIZJĘ');
         score += 1;
         document.querySelector(".scoore").innerHTML = 'PUNKTY: ' + score;
-        return;
+        changeColor(item);
       }
     })
     
