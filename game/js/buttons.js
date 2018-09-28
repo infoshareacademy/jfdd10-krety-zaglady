@@ -9,12 +9,14 @@ function endScreenAppears() {
 }
 
 function stopGame() {
-    clearInterval(id)
-    var items = document.querySelectorAll('.item')
-    items.forEach(function (item) {
+    clearInterval(id);
+    var items = document.querySelectorAll('.item');
+        items.forEach(function (item) {
         item.remove()
-    })
-    endScreenAppears()
+    });
+    endScreenAppears();
+    var endScore = document.querySelector('.endScore');
+    endScore.innerText = "Twój wynik: " + score;
 }
 
 introScreenAppears()

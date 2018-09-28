@@ -14,6 +14,7 @@ var itemSpeed = 3;
 function keyPressedHappened() {
   window.addEventListener('keydown', function (event) {
     keyPressed = event.code;
+    event.preventDefault();
   })
   window.addEventListener('keyup', function (event) {
     keyPressed = false;
@@ -39,9 +40,9 @@ function moveBasket(basket) {
   var position = parseFloat(window.getComputedStyle(basket).left);
 
   if (keyPressed) {
-    if (keyPressed === 'KeyZ') {
+    if (keyPressed === 'ArrowLeft') {
       velocity = -speed;
-    } else if (keyPressed === 'KeyM') {
+    } else if (keyPressed === 'ArrowRight') {
       velocity = speed;
     } else {
       return false;
@@ -112,11 +113,12 @@ function play() {
   }
 
   changeColor(createFruit())
-  changeColor(createFruit())
-  changeColor(createFruit())
+  setTimeout(function() {
+    changeColor(createFruit())
+  }, 1000)
 
   function changeColor(element) {
-    var randomFruit = Math.floor(Math.random() * fruiTs.length );
+    var randomFruit = Math.floor(Math.random() * 2 );
 
   if(fruiTs[randomFruit] === "fruit1") {
     element.classList.add("fruit1");
