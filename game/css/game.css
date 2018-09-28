@@ -1,6 +1,8 @@
 .fruit1 {
     background: url(../fruits.png/arbuz.png) no-repeat center;
-    background-size: 100%;
+    background-size: 90%;
+    width: 80px;
+    height: 80px;
 }
 
 .fruit2 {
