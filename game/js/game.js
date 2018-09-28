@@ -113,11 +113,12 @@ function play() {
   }
 
   changeColor(createFruit())
-  changeColor(createFruit())
-  changeColor(createFruit())
+  setTimeout(function() {
+    changeColor(createFruit())
+  }, 1000)
 
   function changeColor(element) {
-    var randomFruit = Math.floor(Math.random() * fruiTs.length );
+    var randomFruit = Math.floor(Math.random() * 2 );
 
   if(fruiTs[randomFruit] === "fruit1") {
     element.classList.add("fruit1");
