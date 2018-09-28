@@ -14,6 +14,7 @@ var itemSpeed = 3;
 function keyPressedHappened() {
   window.addEventListener('keydown', function (event) {
     keyPressed = event.code;
+    event.preventDefault();
   })
   window.addEventListener('keyup', function (event) {
     keyPressed = false;
@@ -39,9 +40,9 @@ function moveBasket(basket) {
   var position = parseFloat(window.getComputedStyle(basket).left);
 
   if (keyPressed) {
-    if (keyPressed === 'KeyZ') {
+    if (keyPressed === 'ArrowLeft') {
       velocity = -speed;
-    } else if (keyPressed === 'KeyM') {
+    } else if (keyPressed === 'ArrowRight') {
       velocity = speed;
     } else {
       return false;
