@@ -102,7 +102,7 @@ function play() {
 
     var item = document.createElement('div');
     board.appendChild(item);
-    var left = Math.floor(Math.random() * (board.clientWidth - elementToPosition(item).radius * 2) );
+    var left = Math.floor(Math.random() * (board.clientWidth - elementToPosition(item).radius * 2) - 10);
     console.log(left);
     item.classList.add('item');
     item.style.left = left + "px";
@@ -111,11 +111,10 @@ function play() {
     return item;
 
   }
-
+  
   changeColor(createFruit())
-  setTimeout(function() {
-    changeColor(createFruit())
-  }, 1000)
+  changeColor(createFruit())
+
 
   function changeColor(element) {
     var randomFruit = Math.floor(Math.random() * 2 );
