@@ -19,6 +19,13 @@ function stopGame() {
     endScore.innerText = "Twój wynik: " + score;
 }
 
+function resetScoreAndLife() {
+    life = 3
+    document.querySelector('.life').innerHTML = 'LIFE:' + life;
+    score = 0
+    document.querySelector('.score').innerHTML =  'SCORE: ' + score;
+}
+
 introScreenAppears()
 
 window.addEventListener('click', function (event) {
@@ -28,8 +35,7 @@ window.addEventListener('click', function (event) {
         var endScreen = document.querySelector('.endScreen');
         introScreen.style.display = 'none';
         endScreen.style.display = 'none';
-        life = 3;
-        score = 0;
+        resetScoreAndLife();
         play();
     }
 })

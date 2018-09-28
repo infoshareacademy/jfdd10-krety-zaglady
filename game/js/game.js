@@ -159,7 +159,7 @@ function play() {
         item.style.top = '0px';
         console.log('MAMY KOLIZJĘ');
         score += 1;
-        document.querySelector(".scoore").innerHTML = 'PUNKTY: ' + score;
+        document.querySelector(".score").innerHTML = 'SCORE: ' + score;
         changeColor(item);
       }
     })
