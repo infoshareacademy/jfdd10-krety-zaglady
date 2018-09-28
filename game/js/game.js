@@ -8,7 +8,6 @@
 var keyPressed
 var id;
 var score = 0;
-var score = 0;
 var life = 3;
 var speed = 5;
 var itemSpeed = 3;
@@ -36,8 +35,6 @@ function moveItem(item) {
 }
 
 function moveBasket(basket) {
-
-
   var velocity = 0;
   var position = parseFloat(window.getComputedStyle(basket).left);
 
@@ -103,18 +100,20 @@ function play() {
   function createFruit() {
 
     var item = document.createElement('div');
+    board.appendChild(item);
     var left = Math.floor(Math.random() * (board.clientWidth - elementToPosition(item).radius * 2) );
+    console.log(left);
     item.classList.add('item');
     item.style.left = left + "px";
-    board.appendChild(item);
-    items.push(item);
     
+    items.push(item);
+    return item;
 
   }
 
-  createFruit()
-  createFruit()
-  createFruit()
+  changeColor(createFruit())
+  changeColor(createFruit())
+  changeColor(createFruit())
 
   function changeColor(element) {
     var randomFruit = Math.floor(Math.random() * fruiTs.length );
@@ -146,6 +145,9 @@ function play() {
         item.style.top = '0px';
         life -= 1;
         document.querySelector(".life").innerHTML = 'LIFE: ' + life;
+        if (life < 1) {
+          stopGame();
+        }
         changeColor(item);
       }
   
