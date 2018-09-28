@@ -1,13 +1,18 @@
 .fruit1 {
-    background-color: blue;
+    background: url(../fruits.png/arbuz.png) no-repeat center;
+    background-size: 90%;
+    width: 80px;
+    height: 80px;
 }
 
 .fruit2 {
-    background-color: yellow;
+    background: url(../fruits.png/jablko.png) no-repeat center;
+    background-size: 100%;
 }
 
 .fruit3 {
-    background-color: green;
+    background: url(../fruits.png/wisnia.png) no-repeat center;
+    background-size: 100%;
 }
 
 
