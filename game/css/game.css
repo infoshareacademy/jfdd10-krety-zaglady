@@ -69,22 +69,36 @@
     width: 30%;
     height: 115px;
     background-color: gray;
+    color:  black;
+    font-size: 40px;
+    text-shadow: 2px 1px rgba(179, 179, 166, 0.658);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.5);
+    border-radius:10px;
 }
 .hot_key {
     margin: auto;
     width: 30%;
     height: 115px;
     background-color: gray;
+    background: rgba(255,255,255,0.5);
+    border-radius:10px;
 }
-.scoore {
+.score {
     margin: auto;
     width: 30%;
     height: 115px;
     background-color: gray;
-    color:  white;
-    font-size: 30px;
+    color:  black;
+    font-size: 40px;
+    text-shadow: 2px 1px rgba(179, 179, 166, 0.658);
     display: flex;
     justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.5);
+    border-radius:10px;
 }
 
 .introScreen {
