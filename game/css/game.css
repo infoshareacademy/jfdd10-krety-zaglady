@@ -123,7 +123,7 @@
     background-color: white;
     margin: 80 auto;
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     background: rgba(255,255,255,0.5);
     border-radius:10px;
@@ -139,7 +139,7 @@
     text-align: center;
     cursor: hand;
     cursor: pointer;
-    font-size: 14pt;
+    font-size: 18pt;
     color: white;
     margin: 0 auto;
     background-color: rgba(83, 197, 2, 0.925);
