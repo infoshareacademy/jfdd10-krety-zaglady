@@ -21,7 +21,7 @@
     margin-right: auto;
     width: 1200px;
     height: 800px;
-    background-color: gray;
+    background-color: white;
 }
 .game_main {
     display: flex;
@@ -30,7 +30,7 @@
     margin-right: auto;
     width: 990px;
     height: 790px;
-    background-color: darkgray;
+    background-color: rgb(19, 212, 212);
 }
 .game_main_window {
     margin-left: auto;
@@ -38,7 +38,7 @@
     padding-top: 10px;
     width: 990px;
     height: 650px;
-    background-color: darkgray;
+    background-color: rgb(19, 212, 212);
 }
 .level_window {
     position: relative;
@@ -71,7 +71,7 @@
     margin-right: 10px;
     width: 98%;
     height: 120px;
-    background-color: darkgray;
+    background-color: rgb(19, 212, 212);
 }
 .life {
     margin: auto;
@@ -93,6 +93,8 @@
     height: 115px;
     background-color: gray;
     background: rgba(255,255,255,0.5);
+    /* background: url(../../molelogo.png) no-repeat center;
+    background-size: contain; */
     border-radius:10px;
 }
 .score {
