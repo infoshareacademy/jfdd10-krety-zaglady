@@ -74,12 +74,15 @@
     background-color: rgb(19, 212, 212);
 }
 .life, .score, .hot_key {
+    
     margin: auto;
     width: 30%;
     height: 115px;
     background-color: gray;
     color:  black;
-    font-size: 40px;
+    font-family: 'Amatic SC';
+    font-size: 60px;
+    font-weight: bold;
     text-shadow: 2px 1px rgba(179, 179, 166, 0.658);
     display: flex;
     justify-content: center;
@@ -88,7 +91,8 @@
     border-radius:10px;
 }
 .hot_key {
-    font-size: 30px;
+    font-size: 55px;
+    line-height: 61px;
     text-align: center;
 }
 
