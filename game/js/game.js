@@ -21,12 +21,6 @@ function keyPressedHappened() {
   });
 }
 
-var fruiTs = ["fruit1", "fruit2", "fruit3"];
-
-//console.log(randomFruit);
-//console.log(fruiTs[randomFruit]);
-
-
 
 
 function moveItem(item) {
@@ -102,33 +96,35 @@ function play() {
 
     var item = document.createElement('div');
     board.appendChild(item);
-    var left = Math.max(Math.floor(Math.random() * (board.clientWidth - 40) ), 0);
+    var left = Math.max(Math.floor(Math.random() * (board.clientWidth - 40)), 0);
     item.classList.add('item');
     item.style.left = left + "px";
-    
+
     items.push(item);
     return item;
 
   }
 
   changeColor(createFruit())
-  setTimeout(function() {
+  setTimeout(function () {
     changeColor(createFruit())
   }, 1000)
 
+  
+  
   function changeColor(element) {
-    var randomFruit = Math.floor(Math.random() * 2 );
+    var randomFruit = Math.floor(Math.random() * 3);
+    var fruiTs = ["fruit1", "fruit2", "fruit3"];
 
-  if(fruiTs[randomFruit] === "fruit1") {
-    element.classList.add("fruit1");
+    if (fruiTs[randomFruit] === "fruit1") {
+      element.classList.add("fruit1");
     }
-    
-    if(fruiTs[randomFruit] === "fruit2") {
+
+    if (fruiTs[randomFruit] === "fruit2") {
       element.classList.add("fruit2");
     }
-    
-    
-    if(fruiTs[randomFruit] === "fruit3") {
+
+    if (fruiTs[randomFruit] === "fruit3") {
       element.classList.add("fruit3");
     }
   }
@@ -141,27 +137,27 @@ function play() {
       moveItem(item);
       var position = parseFloat(window.getComputedStyle(item).top);
       if (outOfBounds(position)) {
-        var left = Math.max(Math.floor(Math.random() * (board.clientWidth - 40) ), 0);
+        var left = Math.max(Math.floor(Math.random() * (board.clientWidth - 40)), 0);
         item.style.left = left + 'px';
         item.style.top = '0px';
         life -= 1;
-        document.querySelector(".life").innerHTML = 'LIFE: ' + life;
+        document.querySelector(".life").innerHTML = 'ŻYCIE: ' + life;
         if (life < 1) {
           stopGame();
         }
         changeColor(item);
       }
-  
+
       if (collides(elementToPosition(basket), elementToPosition(item))) {
-        left = Math.max(Math.floor(Math.random() * (board.clientWidth - 40) ), 0);
+        left = Math.max(Math.floor(Math.random() * (board.clientWidth - 40)), 0);
         item.style.left = left + 'px';
         item.style.top = '0px'
         score += 1;
-        document.querySelector(".score").innerHTML = 'SCORE: ' + score;
+        document.querySelector(".score").innerHTML = 'WYNIK: ' + score;
         changeColor(item);
       }
     })
-    
+
   }, 16);
 }
 
