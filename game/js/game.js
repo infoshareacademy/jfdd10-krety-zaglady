@@ -50,7 +50,7 @@ function moveBasket(basket) {
   } else {
     return false;
   }
-  position = Math.min(Math.max(0, position + velocity), 940 - 80);
+  position = Math.min(Math.max(0, position + velocity), 940 - basket.style.width);
   basket.style.left = position + 'px';
 }
 
