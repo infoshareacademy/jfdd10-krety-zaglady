@@ -10,6 +10,7 @@ function endScreenAppears() {
 
 function stopGame() {
     clearInterval(id);
+    checkHighScore();
     var items = document.querySelectorAll('.item');
         items.forEach(function (item) {
         item.remove()

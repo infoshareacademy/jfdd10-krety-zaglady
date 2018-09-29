@@ -90,11 +90,6 @@
     background: rgba(255,255,255,0.5);
     border-radius:10px;
 }
-.hot_key {
-    font-size: 55px;
-    line-height: 61px;
-    text-align: center;
-}
 
 .introScreen {
     position: absolute;
