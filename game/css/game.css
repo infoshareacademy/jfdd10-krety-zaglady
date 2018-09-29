@@ -48,7 +48,10 @@
     margin-right: auto;
     width: 95%;
     height: 95%;
-    background-color: black;
+    background: url(../fruits.png/trawa1.png), url(../fruits.png/drzewo.png), url(../fruits.png/tlo.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom, bottom, center;
+    background-size: 100%, 110%, cover;
     overflow: hidden;
 }
 .basket {
