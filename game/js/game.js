@@ -117,14 +117,20 @@ function play() {
     var fruiTs = ["fruit1", "fruit2", "fruit3"];
 
     if (fruiTs[randomFruit] === "fruit1") {
+      element.classList.remove("fruit2");
+      element.classList.remove("fruit3");
       element.classList.add("fruit1");
     }
 
     if (fruiTs[randomFruit] === "fruit2") {
+      element.classList.remove("fruit1");
+      element.classList.remove("fruit3");
       element.classList.add("fruit2");
     }
 
     if (fruiTs[randomFruit] === "fruit3") {
+      element.classList.remove("fruit1");
+      element.classList.remove("fruit2");
       element.classList.add("fruit3");
     }
   }
