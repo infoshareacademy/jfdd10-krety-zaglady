@@ -10,6 +10,7 @@ function endScreenAppears() {
 
 function stopGame() {
     clearInterval(id);
+    checkHighScore();
     var items = document.querySelectorAll('.item');
         items.forEach(function (item) {
         item.remove()
@@ -21,9 +22,9 @@ function stopGame() {
 
 function resetScoreAndLife() {
     life = 3
-    document.querySelector('.life').innerHTML = 'LIFE:' + life;
+    document.querySelector('.life').innerHTML = 'ŻYCIE: ' + life;
     score = 0
-    document.querySelector('.score').innerHTML =  'SCORE: ' + score;
+    document.querySelector('.score').innerHTML =  'WYNIK: ' + score;
 }
 
 introScreenAppears()
