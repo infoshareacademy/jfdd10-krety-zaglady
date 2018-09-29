@@ -9,7 +9,7 @@ var keyPressed
 var id;
 var score = 0;
 var life = 3;
-var speed = 5;
+var speed = 10;
 var itemSpeed = 3;
 function keyPressedHappened() {
   window.addEventListener('keydown', function (event) {
@@ -50,7 +50,7 @@ function moveBasket(basket) {
   } else {
     return false;
   }
-  position = Math.min(Math.max(0, position + velocity), 940 - basket.style.width);
+  position = Math.min(Math.max(0, position + velocity), 940 - 80);
   basket.style.left = position + 'px';
 }
 
@@ -102,8 +102,7 @@ function play() {
 
     var item = document.createElement('div');
     board.appendChild(item);
-    var left = Math.floor(Math.random() * (board.clientWidth - elementToPosition(item).radius * 2) );
-    console.log(left);
+    var left = Math.max(Math.floor(Math.random() * (board.clientWidth - 40) ), 0);
     item.classList.add('item');
     item.style.left = left + "px";
     
@@ -142,7 +141,7 @@ function play() {
       moveItem(item);
       var position = parseFloat(window.getComputedStyle(item).top);
       if (outOfBounds(position)) {
-        var left = Math.floor(Math.random() * board.clientWidth);
+        var left = Math.max(Math.floor(Math.random() * (board.clientWidth - 40) ), 0);
         item.style.left = left + 'px';
         item.style.top = '0px';
         life -= 1;
@@ -154,10 +153,9 @@ function play() {
       }
   
       if (collides(elementToPosition(basket), elementToPosition(item))) {
-        left = Math.floor(Math.random() * board.clientWidth);
+        left = Math.max(Math.floor(Math.random() * (board.clientWidth - 40) ), 0);
         item.style.left = left + 'px';
-        item.style.top = '0px';
-        console.log('MAMY KOLIZJĘ');
+        item.style.top = '0px'
         score += 1;
         document.querySelector(".score").innerHTML = 'SCORE: ' + score;
         changeColor(item);
