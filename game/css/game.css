@@ -61,7 +61,8 @@
     left: 430px;
     height: 40px;
     width: 80px;
-    background-color: lawngreen;
+    background: url(../fruits.png/koszyk.png) no-repeat bottom;
+    background-size: cover;
 }
 .stats_window {
     display: flex;
