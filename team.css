@@ -18,6 +18,8 @@
 }
 .social{
     min-width: 160px;
+    display: flex;
+    justify-content: center;
 }
 .team-member a {
     text-decoration: none;

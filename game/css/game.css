@@ -1,22 +1,28 @@
 .fruit1 {
-    background-color: blue;
+    background: url(../fruits.png/arbuz.png) no-repeat center;
+    background-size: 90%;
+    width: 80px;
+    height: 80px;
 }
 
 .fruit2 {
-    background-color: yellow;
+    background: url(../fruits.png/jablko.png) no-repeat center;
+    background-size: 100%;
 }
 
 .fruit3 {
-    background-color: green;
+    background: url(../fruits.png/wisnia.png) no-repeat center;
+    background-size: 100%;
 }
 
 
 .game {
+    font-family: 'Amatic SC';
     margin-left: auto;
     margin-right: auto;
     width: 1200px;
     height: 800px;
-    background-color: gray;
+    background-color: white;
 }
 .game_main {
     display: flex;
@@ -25,7 +31,7 @@
     margin-right: auto;
     width: 990px;
     height: 790px;
-    background-color: darkgray;
+    background-color: rgb(19, 212, 212);
 }
 .game_main_window {
     margin-left: auto;
@@ -33,7 +39,7 @@
     padding-top: 10px;
     width: 990px;
     height: 650px;
-    background-color: darkgray;
+    background-color: rgb(19, 212, 212);
 }
 .level_window {
     position: relative;
@@ -43,7 +49,10 @@
     margin-right: auto;
     width: 95%;
     height: 95%;
-    background-color: black;
+    background: url(../fruits.png/trawa1.png), url(../fruits.png/drzewo.png), url(../fruits.png/tlo.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom, bottom, center;
+    background-size: 103%, 110%, cover;
     overflow: hidden;
 }
 .basket {
@@ -53,7 +62,8 @@
     left: 430px;
     height: 40px;
     width: 80px;
-    background-color: lawngreen;
+    background: url(../fruits.png/koszyk.png) no-repeat bottom;
+    background-size: cover;
 }
 .stats_window {
     display: flex;
@@ -62,37 +72,17 @@
     margin-right: 10px;
     width: 98%;
     height: 120px;
-    background-color: darkgray;
+    background-color: rgb(19, 212, 212);
 }
-.life {
+.life, .score, .hot_key {
+    
     margin: auto;
     width: 30%;
     height: 115px;
     background-color: gray;
     color:  black;
-    font-size: 40px;
-    text-shadow: 2px 1px rgba(179, 179, 166, 0.658);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(255,255,255,0.5);
-    border-radius:10px;
-}
-.hot_key {
-    margin: auto;
-    width: 30%;
-    height: 115px;
-    background-color: gray;
-    background: rgba(255,255,255,0.5);
-    border-radius:10px;
-}
-.score {
-    margin: auto;
-    width: 30%;
-    height: 115px;
-    background-color: gray;
-    color:  black;
-    font-size: 40px;
+    font-size: 60px;
+    font-weight: bold;
     text-shadow: 2px 1px rgba(179, 179, 166, 0.658);
     display: flex;
     justify-content: center;
@@ -114,16 +104,16 @@
 
 .introScreenContent {
     position: absolute;
-    left: 100px;
+    left: 50px;
     top: 100px;
-    width: 400px;
+    width: 500px;
     height: 200px;
     box-sizing: border-box;
     padding: 20px;
     background-color: white;
     margin: 80 auto;
     text-align: center;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bold;
     background: rgba(255,255,255,0.5);
     border-radius:10px;
@@ -139,7 +129,8 @@
     text-align: center;
     cursor: hand;
     cursor: pointer;
-    font-size: 14pt;
+    font-size: 30px;
+    font-weight: 600;
     color: white;
     margin: 0 auto;
     background-color: rgba(83, 197, 2, 0.925);
@@ -170,15 +161,15 @@
 .endScreenContent {
     position: absolute;
     left: 100px;
-    top: 100px;
+    top: 75px;
     width: 400px;
-    height: 200px;
+    height: 250px;
     box-sizing: border-box;
     padding: 20px;
     background-color: white;
     margin: 80 auto;
     text-align: center;
-    font-size: 30px;
+    font-size: 60px;
     font-weight: bold;
     background: rgba(255,255,255,0.5);
     border-radius: 10px;
@@ -193,6 +184,7 @@
     box-sizing: border-box;
     padding: 10px;
     margin: 80 auto;
+    font-size: 35px;
     text-align: center;
 }
 

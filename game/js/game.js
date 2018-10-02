@@ -7,26 +7,30 @@
 // - Jeżeli skończyły mi się życia, to umieram\
 var keyPressed
 var id;
+var highScore = 0
 var score = 0;
 var life = 3;
-var speed = 5;
+var speed = 10;
 var itemSpeed = 3;
 function keyPressedHappened() {
   window.addEventListener('keydown', function (event) {
     keyPressed = event.code;
+    event.preventDefault();
   })
   window.addEventListener('keyup', function (event) {
     keyPressed = false;
   });
 }
 
-var fruiTs = ["fruit1", "fruit2", "fruit3"];
-
-//console.log(randomFruit);
-//console.log(fruiTs[randomFruit]);
-
-
-
+function checkHighScore () {
+  var highScoreDiv = document.querySelector(".hot_key")
+  if (highScore > score) {
+    return;
+  }
+  highScore = score;
+  highScoreDiv.innerHTML = "REKORD: " + highScore;
+  return highScore;
+}
 
 function moveItem(item) {
   var position = parseFloat(window.getComputedStyle(item).top);
@@ -39,9 +43,9 @@ function moveBasket(basket) {
   var position = parseFloat(window.getComputedStyle(basket).left);
 
   if (keyPressed) {
-    if (keyPressed === 'KeyZ') {
+    if (keyPressed === 'ArrowLeft') {
       velocity = -speed;
-    } else if (keyPressed === 'KeyM') {
+    } else if (keyPressed === 'ArrowRight') {
       velocity = speed;
     } else {
       return false;
@@ -101,33 +105,41 @@ function play() {
 
     var item = document.createElement('div');
     board.appendChild(item);
-    var left = Math.floor(Math.random() * (board.clientWidth - elementToPosition(item).radius * 2) );
-    console.log(left);
+    var left = Math.max(Math.floor(Math.random() * (board.clientWidth - 40)), 0);
     item.classList.add('item');
     item.style.left = left + "px";
-    
+
     items.push(item);
     return item;
 
   }
 
   changeColor(createFruit())
-  changeColor(createFruit())
-  changeColor(createFruit())
+  setTimeout(function () {
+    changeColor(createFruit())
+  }, 1000)
 
+  
+  
   function changeColor(element) {
-    var randomFruit = Math.floor(Math.random() * fruiTs.length );
+    var randomFruit = Math.floor(Math.random() * 3);
+    var fruiTs = ["fruit1", "fruit2", "fruit3"];
 
-  if(fruiTs[randomFruit] === "fruit1") {
-    element.classList.add("fruit1");
+    if (fruiTs[randomFruit] === "fruit1") {
+      element.classList.remove("fruit2");
+      element.classList.remove("fruit3");
+      element.classList.add("fruit1");
     }
-    
-    if(fruiTs[randomFruit] === "fruit2") {
+
+    if (fruiTs[randomFruit] === "fruit2") {
+      element.classList.remove("fruit1");
+      element.classList.remove("fruit3");
       element.classList.add("fruit2");
     }
-    
-    
-    if(fruiTs[randomFruit] === "fruit3") {
+
+    if (fruiTs[randomFruit] === "fruit3") {
+      element.classList.remove("fruit1");
+      element.classList.remove("fruit2");
       element.classList.add("fruit3");
     }
   }
@@ -140,64 +152,27 @@ function play() {
       moveItem(item);
       var position = parseFloat(window.getComputedStyle(item).top);
       if (outOfBounds(position)) {
-        var left = Math.floor(Math.random() * board.clientWidth);
+        var left = Math.max(Math.floor(Math.random() * (board.clientWidth - 40)), 0);
         item.style.left = left + 'px';
         item.style.top = '0px';
         life -= 1;
-        document.querySelector(".life").innerHTML = 'LIFE: ' + life;
+        document.querySelector(".life").innerHTML = 'ŻYCIE: ' + life;
         if (life < 1) {
           stopGame();
         }
         changeColor(item);
       }
-  
+
       if (collides(elementToPosition(basket), elementToPosition(item))) {
-        left = Math.floor(Math.random() * board.clientWidth);
+        left = Math.max(Math.floor(Math.random() * (board.clientWidth - 40)), 0);
         item.style.left = left + 'px';
-        item.style.top = '0px';
-        console.log('MAMY KOLIZJĘ');
+        item.style.top = '0px'
         score += 1;
-        document.querySelector(".score").innerHTML = 'SCORE: ' + score;
+        document.querySelector(".score").innerHTML = 'WYNIK: ' + score;
         changeColor(item);
       }
     })
-    
+
   }, 16);
 }
 
-
-
-//------------------------------------------------------------------------------------
-
-// (function () {
-//     var position = 430;
-//     var velocity = 0;
-//     var player = document.querySelector('.basket');
-//     var goLeft = false;
-//     var goRight = false;
-//     var dTime = 16;
-//     var keyPressed = false;
-//     window.addEventListener('keydown', function (event) {
-//         keyPressed = event.code;
-//     })
-//     window.addEventListener('keyup', function (event) {
-//         keyPressed = false;
-//     });
-//     setInterval(function () {
-//         if (keyPressed) {
-//             if (keyPressed === 'KeyZ') {
-//                 velocity = -1;
-//             } else if (keyPressed === 'KeyM') {
-//                 velocity = 1;
-//             } else {
-//                 return false;
-//             }
-//         } else {
-//             return false;
-//         }
-//         console.log(position, velocity)
-
-//         position = Math.min(Math.max(0, position + velocity), 940 - 80);
-//         player.style.left = position + 'px';
-//     }, dTime)
-// })()

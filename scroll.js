@@ -11,7 +11,7 @@
       event.preventDefault();
 
       window.scroll({
-        top: target.offsetTop,
+        top: target.offsetTop - 80,
         behavior: "smooth"
       })
     })

@@ -9,19 +9,22 @@ function endScreenAppears() {
 }
 
 function stopGame() {
-    clearInterval(id)
-    var items = document.querySelectorAll('.item')
-    items.forEach(function (item) {
+    clearInterval(id);
+    checkHighScore();
+    var items = document.querySelectorAll('.item');
+        items.forEach(function (item) {
         item.remove()
-    })
-    endScreenAppears()
+    });
+    endScreenAppears();
+    var endScore = document.querySelector('.endScore');
+    endScore.innerText = "Twój wynik: " + score;
 }
 
 function resetScoreAndLife() {
     life = 3
-    document.querySelector('.life').innerHTML = 'LIFE:' + life;
+    document.querySelector('.life').innerHTML = 'ŻYCIE: ' + life;
     score = 0
-    document.querySelector('.score').innerHTML =  'SCORE: ' + score;
+    document.querySelector('.score').innerHTML =  'WYNIK: ' + score;
 }
 
 introScreenAppears()
