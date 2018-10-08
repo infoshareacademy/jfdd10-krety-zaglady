@@ -22,7 +22,7 @@ function keyPressedHappened() {
   });
 }
 
-function checkHighScore () {
+function checkHighScore() {
   var highScoreDiv = document.querySelector(".hot_key")
   if (highScore > score) {
     return;
@@ -119,8 +119,8 @@ function play() {
     changeColor(createFruit())
   }, 1000)
 
-  
-  
+
+
   function changeColor(element) {
     var randomFruit = Math.floor(Math.random() * 3);
     var fruiTs = ["fruit1", "fruit2", "fruit3"];
@@ -170,9 +170,19 @@ function play() {
         score += 1;
         document.querySelector(".score").innerHTML = 'WYNIK: ' + score;
         changeColor(item);
+        nextLevel()
       }
     })
 
   }, 16);
 }
 
+function nextLevel() {
+  if (score >= 10 && score < 20) {
+    itemSpeed = 4;
+  }
+  if (score >= 20) {
+    itemSpeed = 5;
+    speed = 13
+  }
+}
