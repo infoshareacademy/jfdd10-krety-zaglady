@@ -92,9 +92,10 @@ function updateSize() {
 }
 
 window.addEventListener('resize', updateSize )
+updateSize()
 
 function outOfBounds(position) {
-  if (position >= size) {
+  if (position >= size) {    
     return true;
   }
 }
@@ -107,6 +108,7 @@ function play() {
   basket.style.left = "430px"
   var items = []
   keyPressedHappened()
+  
 
   // - Utworzyć owoca w losowej pozycji na planszy
   function createFruit() {
