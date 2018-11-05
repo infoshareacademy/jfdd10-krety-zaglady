@@ -94,7 +94,7 @@ function outOfBounds(position) {
 function play() {
 
   // - Znaleźć koszyk i ustawić go na środku planszy
-  var board = document.querySelector('.level_window')
+  var board = document.querySelector('.')
   var basket = document.querySelector('.basket');
   basket.style.left = "430px"
   var items = []
