@@ -19,8 +19,7 @@
 .game {
     font-family: 'Amatic SC';
     margin-left: auto;
-    width: 1200px;
-    height: 800px;
+    margin-right: auto;
     background-color: white;
 }
 .game_main {
@@ -29,7 +28,6 @@
     margin-left: auto;
     margin-right: auto;
     width: 990px;
-    height: 790px;
     background-color: rgb(19, 212, 212);
 }
 .game_main_window {
@@ -37,7 +35,7 @@
     margin-right: auto;
     padding-top: 10px;
     width: 990px;
-    height: 650px;
+    height: calc(100vh - 150px);
     background-color: rgb(19, 212, 212);
 }
 .level_window {
