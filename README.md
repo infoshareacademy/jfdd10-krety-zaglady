@@ -1,1 +1,0 @@
-# jfdd10-krety-zaglady
