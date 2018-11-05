@@ -85,8 +85,16 @@ function collides(a, b) {
   return false;
 }
 
+var size;
+
+function updateSize() {
+  size = document.querySelector('.level_window').clientHeight
+}
+
+window.addEventListener('resize', updateSize )
+
 function outOfBounds(position) {
-  if (position >= 617) {
+  if (position >= size) {
     return true;
   }
 }
