@@ -93,26 +93,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* position: absolute;
-    z-index: 100;
-    left: 170px;
-    top: 108px;
-    width: 600px;
-    height: 400px;
-    background-color: rgb(19, 212, 212);
-    border-radius: 10px; */
 }
 
 .introScreenContent {
-    /* position: absolute;
-    left: 50px;
-    top: 100px;
-    width: 500px;
-    height: 200px; */
     box-sizing: border-box;
     padding: 20px;
     background-color: white;
-    /* margin: 80px auto; */
     text-align: center;
     font-size: 2.5em;
     font-weight: bold;
@@ -121,9 +107,6 @@
 }
 
 .button {
-    /* position: absolute;
-    top: 230px;
-    left: 240px; */
     padding: 10px;
     border-radius: 10px;
     width: 15%;
@@ -138,7 +121,6 @@
     background-color: rgba(83, 197, 2, 0.925);
     border-bottom: 5px solid #669644;
     text-shadow: 0px -2px #669644;
-
 }
 
 .button:hover {
@@ -146,7 +128,6 @@
     border-bottom: 5px solid #669644;
     text-shadow: 0px -2px #669644;
 }
-
 
 .endScreen {
     height: 100%;
@@ -156,16 +137,10 @@
 } 
 
 .endScreenContent {
-    /* position: absolute;
-    left: 100px;
-    top: 75px;
-    width: 400px;
-    height: 250px; */
     width: 40%;
     box-sizing: border-box;
     padding: 20px;
     background-color: white;
-    /* margin: 80 auto; */
     text-align: center;
     font-size: 2.5em;
     font-weight: bold;
@@ -174,30 +149,8 @@
 }
 
 .endScore {
-    /* position: absolute;
-    left: 100px;
-    top: 170px;
-    width: 400px;
-    height: 50px; */
     box-sizing: border-box;
     padding: 10px;
-    /* margin: 80 auto; */
     font-size: 0.8em;
     text-align: center;
 }
-
-/* .buttonHS {
-    position: absolute;
-    top: 200px;
-    left: 240px;
-    padding: 10px;
-    border-radius: 10px;
-    width: 100px;
-    text-align: center;
-    cursor: hand;
-    cursor: pointer;
-    font-size: 14pt;
-    background-color: #888888;
-    color: white;
-    margin: 0 auto;
-} */
