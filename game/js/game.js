@@ -107,6 +107,7 @@ function play() {
   // - Znaleźć koszyk i ustawić go na środku planszy
   basket.style.left = (0.95*(board.clientWidth) / 2) + "px";
   var items = []
+  itemSpeed = 3;
   keyPressedHappened()
   
 
