@@ -15,7 +15,9 @@
     background-size: 100%;
 }
 
-
+body {
+    margin: 0;
+}
 .game {
     font-family: 'Amatic SC';
     margin-left: auto;
@@ -35,7 +37,7 @@
     margin-right: auto;
     padding-top: 10px;
     width: 100%;
-    height: calc(100vh - 150px);
+    height: calc(100vh - 80px);
     background-color: rgb(19, 212, 212);
 }
 .level_window {
@@ -161,7 +163,7 @@
     .game_main {
         width: 60%;
     }
-    
+
     .endScreenContent {
         width: 40%;
     }
