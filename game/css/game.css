@@ -89,47 +89,52 @@
 }
  
 .introScreen {
-    position: absolute;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute;
     z-index: 100;
     left: 170px;
     top: 108px;
     width: 600px;
     height: 400px;
     background-color: rgb(19, 212, 212);
-    border-radius: 10px;
+    border-radius: 10px; */
 }
 
 .introScreenContent {
-    position: absolute;
+    /* position: absolute;
     left: 50px;
     top: 100px;
     width: 500px;
-    height: 200px;
+    height: 200px; */
     box-sizing: border-box;
     padding: 20px;
     background-color: white;
-    margin: 80 auto;
+    /* margin: 80px auto; */
     text-align: center;
-    font-size: 35px;
+    font-size: 2.2em;
     font-weight: bold;
     background: rgba(255,255,255,0.5);
     border-radius:10px;
 }
 
 .button {
-    position: absolute;
+    /* position: absolute;
     top: 230px;
-    left: 240px;
+    left: 240px; */
     padding: 10px;
     border-radius: 10px;
-    width: 100px;
+    width: 15%;
     text-align: center;
     cursor: hand;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 0.8em;
     font-weight: 600;
     color: white;
     margin: 0 auto;
+    margin-top: 10px;
     background-color: rgba(83, 197, 2, 0.925);
     border-bottom: 5px solid #669644;
     text-shadow: 0px -2px #669644;

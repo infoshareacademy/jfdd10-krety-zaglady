@@ -1,11 +1,11 @@
 function introScreenAppears() {
     var introScreen = document.querySelector('.introScreen');
-    introScreen.style.display = 'block';
+    introScreen.style.display = 'flex';
 }
 
 function endScreenAppears() {
     var endScreen = document.querySelector('.endScreen');
-    endScreen.style.display = 'block';
+    endScreen.style.display = 'flex';
 }
 
 function stopGame() {
