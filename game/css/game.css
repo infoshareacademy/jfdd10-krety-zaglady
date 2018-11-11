@@ -15,7 +15,9 @@
     background-size: 100%;
 }
 
-
+body {
+    margin: 0;
+}
 .game {
     font-family: 'Amatic SC';
     margin-left: auto;
@@ -27,15 +29,15 @@
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
-    width: 990px;
     background-color: rgb(19, 212, 212);
 }
+
 .game_main_window {
     margin-left: auto;
     margin-right: auto;
     padding-top: 10px;
-    width: 990px;
-    height: calc(100vh - 150px);
+    width: 100%;
+    height: calc(100vh - 80px);
     background-color: rgb(19, 212, 212);
 }
 .level_window {
@@ -49,14 +51,13 @@
     background: url(../fruits.png/trawa1.png), url(../fruits.png/drzewo.png), url(../fruits.png/tlo.jpg);
     background-repeat: no-repeat;
     background-position: bottom, bottom, center;
-    background-size: 103%, 110%, cover;
+    background-size: 103%, 150%, cover;
     overflow: hidden;
 }
 .basket {
     position: absolute;
     z-index: 100;
     bottom: 0;
-    left: 430px;
     height: 40px;
     width: 80px;
     background: url(../fruits.png/koszyk.png) no-repeat bottom;
@@ -64,21 +65,18 @@
 }
 .stats_window {
     display: flex;
-    margin: auto;
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 98%;
-    height: 120px;
+    margin: auto 10px;
+    margin-bottom: 10px;
+    text-align: center;
     background-color: rgb(19, 212, 212);
 }
 .life, .score, .hot_key {
     
     margin: auto;
     width: 30%;
-    height: 115px;
     background-color: gray;
     color:  black;
-    font-size: 60px;
+    font-size: 4vh;
     font-weight: bold;
     text-shadow: 2px 1px rgba(179, 179, 166, 0.658);
     display: flex;
@@ -89,51 +87,38 @@
 }
  
 .introScreen {
-    position: absolute;
-    z-index: 100;
-    left: 170px;
-    top: 108px;
-    width: 600px;
-    height: 400px;
-    background-color: rgb(19, 212, 212);
-    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .introScreenContent {
-    position: absolute;
-    left: 50px;
-    top: 100px;
-    width: 500px;
-    height: 200px;
     box-sizing: border-box;
     padding: 20px;
     background-color: white;
-    margin: 80 auto;
     text-align: center;
-    font-size: 35px;
+    font-size: 5.5vh;
     font-weight: bold;
     background: rgba(255,255,255,0.5);
     border-radius:10px;
 }
 
 .button {
-    position: absolute;
-    top: 230px;
-    left: 240px;
     padding: 10px;
     border-radius: 10px;
-    width: 100px;
+    width: 30%;
     text-align: center;
     cursor: hand;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 0.8em;
     font-weight: 600;
     color: white;
     margin: 0 auto;
+    margin-top: 10px;
     background-color: rgba(83, 197, 2, 0.925);
     border-bottom: 5px solid #669644;
     text-shadow: 0px -2px #669644;
-
 }
 
 .button:hover {
@@ -142,61 +127,48 @@
     text-shadow: 0px -2px #669644;
 }
 
-
 .endScreen {
-    position: absolute;
-    z-index: 101;
-    left: 170px;
-    top: 108px;
-    width: 600px;
-    height: 400px;
-    background-color: rgb(19, 212, 212);
-    border-radius: 10px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
     display: none;
 } 
 
 .endScreenContent {
-    position: absolute;
-    left: 100px;
-    top: 75px;
-    width: 400px;
-    height: 250px;
+    width: 70%;
     box-sizing: border-box;
     padding: 20px;
     background-color: white;
-    margin: 80 auto;
     text-align: center;
-    font-size: 60px;
+    font-size: 5.5vh;
     font-weight: bold;
     background: rgba(255,255,255,0.5);
     border-radius: 10px;
 }
 
 .endScore {
-    position: absolute;
-    left: 100px;
-    top: 170px;
-    width: 400px;
-    height: 50px;
     box-sizing: border-box;
     padding: 10px;
-    margin: 80 auto;
-    font-size: 35px;
+    font-size: 0.8em;
     text-align: center;
 }
 
-/* .buttonHS {
-    position: absolute;
-    top: 200px;
-    left: 240px;
-    padding: 10px;
-    border-radius: 10px;
-    width: 100px;
-    text-align: center;
-    cursor: hand;
-    cursor: pointer;
-    font-size: 14pt;
-    background-color: #888888;
-    color: white;
-    margin: 0 auto;
-} */
+@media screen and (min-width: 500px) {
+    .level_window {
+        background-size: 103%, 110%, cover;
+    }
+}
+
+@media screen and (min-width: 950px) {
+    .game_main {
+        width: 60%;
+    }
+
+    .endScreenContent {
+        width: 40%;
+    }
+
+    .life, .score, .hot_key {
+        font-size: 6vh;
+    }
+}

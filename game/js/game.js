@@ -12,6 +12,8 @@ var score = 0;
 var life = 3;
 var speed = 10;
 var itemSpeed = 3;
+const board = document.querySelector('.level_window')
+const basket = document.querySelector('.basket');
 function keyPressedHappened() {
   window.addEventListener('keydown', function (event) {
     keyPressed = event.code;
@@ -53,7 +55,7 @@ function moveBasket(basket) {
   } else {
     return false;
   }
-  position = Math.min(Math.max(0, position + velocity), 940 - 80);
+  position = Math.min(Math.max(0, position + velocity), board.clientWidth - 80);
   basket.style.left = position + 'px';
 }
 
@@ -85,17 +87,17 @@ function collides(a, b) {
   return false;
 }
 
-var size;
+var height;
 
 function updateSize() {
-  size = document.querySelector('.level_window').clientHeight
+  height = document.querySelector('.level_window').clientHeight
 }
 
 window.addEventListener('resize', updateSize )
 updateSize()
 
 function outOfBounds(position) {
-  if (position >= size) {    
+  if (position >= height) {    
     return true;
   }
 }
@@ -103,10 +105,9 @@ function outOfBounds(position) {
 function play() {
 
   // - Znaleźć koszyk i ustawić go na środku planszy
-  var board = document.querySelector('.level_window')
-  var basket = document.querySelector('.basket');
-  basket.style.left = "430px"
+  basket.style.left = (0.95*(board.clientWidth) / 2) + "px";
   var items = []
+  itemSpeed = 3;
   keyPressedHappened()
   
 
