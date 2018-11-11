@@ -1,6 +1,7 @@
 function introScreenAppears() {
     var introScreen = document.querySelector('.introScreen');
     introScreen.style.display = 'flex';
+    basket.style.left = (0.95*(board.clientWidth) / 2) + "px";
 }
 
 function endScreenAppears() {
